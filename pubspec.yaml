@@ -28,6 +28,16 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  location:
+  qr_flutter:
+  shared_preferences:
+  cached_network_image:
+  flutter_bloc:
+  get_it:
+  image_picker:
+  modal_progress_hud_nsn:
+  dartz:
+  dio:
   animated_text_kit: ^4.2.2
   cupertino_icons: ^1.0.2
   flutter:

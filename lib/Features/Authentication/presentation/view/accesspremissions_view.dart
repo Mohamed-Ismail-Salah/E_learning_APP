@@ -9,7 +9,7 @@ class AccessPremissionsView extends StatelessWidget {
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.all(10),
-        child: AccessPremissionsBody(),
+        child:  SingleChildScrollView(child: AccessPremissionsBody()),
       )),
     );
   }

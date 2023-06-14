@@ -5,6 +5,8 @@ import 'package:e_learning/Core/Utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../Core/Utils/app_shared_preferences.dart';
+
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
 
@@ -28,8 +30,15 @@ class SplashView extends StatelessWidget {
             ),
             AnimatedTextKit(
               totalRepeatCount: 1,
-              onFinished: () {
-                context.pushReplacement(AppRouter.kAccessPremissionsView);
+              onFinished: () async {
+                final tokenStorage = TokenStorage();
+                String? token = await tokenStorage.getToken();
+                if(token==null){
+                  context.pushReplacement(AppRouter.kAccessPremissionsView);
+                }else{
+                  context.pushReplacement(AppRouter.kHomeView);
+                }
+
               },
               animatedTexts: [
                 WavyAnimatedText(

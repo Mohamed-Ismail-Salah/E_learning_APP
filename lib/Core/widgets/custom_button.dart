@@ -8,18 +8,17 @@ class CustomButton extends StatelessWidget {
   CustomButton({super.key, this.name, required this.onTap});
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-          decoration: BoxDecoration(
-              color: AppColor.secondaryColor, borderRadius: BorderRadius.circular(10)),
-          height:  MediaQuery.of(context).size.height*.07,
+    return Container(
+        decoration: BoxDecoration(
+            color: AppColor.secondaryColor, borderRadius: BorderRadius.circular(10)),
+        height:  MediaQuery.of(context).size.height*.07,
+width:MediaQuery.of(context).size.width*.9 ,
+        child: TextButton(
 
-          child: Center(
-              child: Text(
-            name!,
-            style:  Styles.textStyle25,
-          ))),
-    );
+            onPressed:onTap,
+            child: Text(
+          name!,
+          style:  Styles.textStyle25.copyWith(color: Colors.black),
+        )));
   }
 }

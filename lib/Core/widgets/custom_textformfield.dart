@@ -28,6 +28,7 @@ class AppTextFormField extends StatelessWidget {
       controller: ctrl,
       keyboardType: keyboardType,
       focusNode: focusNode,
+
       onFieldSubmitted: (value) => onFieldSubmitted!(value),
       validator: (input) => validator!(input),
       decoration: InputDecoration(

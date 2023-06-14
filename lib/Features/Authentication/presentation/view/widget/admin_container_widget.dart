@@ -18,15 +18,17 @@ class AdminContainerWidget extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(50), color: Colors.white),
-        height: MediaQuery.of(context).size.height * .3,
+        height: MediaQuery.of(context).size.height * .32,
         width: MediaQuery.of(context).size.width * .5,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10),
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(15),
-                child: Image.asset("assets/images/teachings.png"),
+               Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(15),
+                  child: Image.asset("assets/images/teachings.png"),
+                ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
