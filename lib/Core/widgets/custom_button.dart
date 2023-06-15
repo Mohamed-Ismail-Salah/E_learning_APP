@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
   String? name;
+  TextStyle ? textStyle  ;
   VoidCallback onTap;
-  CustomButton({super.key, this.name, required this.onTap});
+  CustomButton({super.key, this.name, required this.onTap,this.textStyle});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +19,8 @@ width:MediaQuery.of(context).size.width*.9 ,
             onPressed:onTap,
             child: Text(
           name!,
-          style:  Styles.textStyle25.copyWith(color: Colors.black),
-        )));
+          style:textStyle??Styles.textStyle25.copyWith(color: Colors.black)
+        )
+    ));
   }
 }

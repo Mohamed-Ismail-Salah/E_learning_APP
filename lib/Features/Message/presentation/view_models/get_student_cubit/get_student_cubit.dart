@@ -8,6 +8,7 @@ class GetStudentCubit extends Cubit<GetStudentState> {
 
   GetStudentCubit(this.getStudentIfRepo) : super(GetStudentInitial());
   final GetStudentIfRepo getStudentIfRepo;
+
   Future<void> getStudentInf(String name)async
   {
     emit(GetStudentLoading());
@@ -21,5 +22,13 @@ class GetStudentCubit extends Cubit<GetStudentState> {
     }
     );
 
+  }
+   StudentInfModel? studentInf;
+  void setStudentInfoModel(StudentInfModel studentInfModel){
+    studentInf=studentInfModel;
+  }
+
+  StudentInfModel? getStudentInfoModel(){
+ return studentInf;
   }
 }

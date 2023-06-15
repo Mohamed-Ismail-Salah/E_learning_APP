@@ -12,7 +12,7 @@ class ListStudentInf extends StatelessWidget {
     return BlocBuilder<GetStudentCubit, GetStudentState>(
           builder: (context, state) {
             if (state is GetStudentLoading) {
-              return const CircularProgressIndicator();
+              return const Center(child:   CircularProgressIndicator());
             } else if (state is GetStudentSuccess) {
               return Flexible(
                 child: ListView.builder(
@@ -21,12 +21,13 @@ class ListStudentInf extends StatelessWidget {
 
                     return StudentItem(name: state.studentInf[index].name,
                       email: state.studentInf[index].email,
+                      studentInfModel:state.studentInf[index],
                     );
                   },
                 ),
               );
             } else if (state is GetStudentFailure) {
-              return Text('An error occurred: ${state.errMessage}');
+             // return Text('An error occurred: ${state.errMessage}');
             }
 
             return Container();

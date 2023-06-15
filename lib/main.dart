@@ -15,6 +15,8 @@ import 'package:e_learning/Features/courses/presentation/view_models/get_courses
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'Core/Utils/app_router.dart';
+import 'Features/Message/data/get_student_inf/get_student_inf_imple.dart';
+import 'Features/Message/presentation/view_models/get_student_cubit/get_student_cubit.dart';
 import 'Features/QrCode/data/repos/get_Student_Attendance/get_Student_attendance_repo_implemntaion.dart';
 import 'Features/QrCode/data/repos/get_allQrcode_repos/get_courses_repo_implemntaion.dart';
 import 'Features/QrCode/presentation/view_models/Qrcode_cubit/qr_code_cubit.dart';
@@ -35,6 +37,8 @@ class MyApp extends StatelessWidget {
         BlocProvider(
             create: (context) =>
                 LoginAdminCubit(LoginAdminRepoImp(ApiService(Dio())))),
+    BlocProvider(
+    create:(context) => GetStudentCubit(GetStudentIfImpRepo(ApiService(Dio())))),
         BlocProvider(
             create: (context) =>
                 SignUpAdminCubit(SignUpAdminRepoImp(ApiService(Dio())))),
