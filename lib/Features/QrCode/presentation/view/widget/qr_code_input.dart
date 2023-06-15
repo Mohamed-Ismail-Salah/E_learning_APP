@@ -23,7 +23,7 @@ class QrCodeInput extends StatelessWidget {
         key: formKey,
         child: Column(children: [
             Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: AppTextFormField(
               hintText: "QR Code Name",
               keyboardType:TextInputType.name,

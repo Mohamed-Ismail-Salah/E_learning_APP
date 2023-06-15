@@ -9,7 +9,7 @@ class AppTextFormField extends StatelessWidget {
   final Function? validator;
   final FocusNode? focusNode;
   final Function? onFieldSubmitted;
-
+  final Function? onChanged;
   const AppTextFormField(
       {Key? key,
       this.ctrl,
@@ -18,7 +18,10 @@ class AppTextFormField extends StatelessWidget {
       this.onFieldSubmitted,
       this.focusNode,
       this.validator,
-        this.suffixIcon, this.prefixIcon})
+        this.suffixIcon,
+        this.prefixIcon,
+        this.onChanged
+      })
       : super(key: key);
 
   @override
@@ -28,7 +31,7 @@ class AppTextFormField extends StatelessWidget {
       controller: ctrl,
       keyboardType: keyboardType,
       focusNode: focusNode,
-
+     onChanged: (value) => onChanged!(value),
       onFieldSubmitted: (value) => onFieldSubmitted!(value),
       validator: (input) => validator!(input),
       decoration: InputDecoration(

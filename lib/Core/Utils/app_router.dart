@@ -4,6 +4,7 @@ import 'package:e_learning/Features/Authentication/presentation/view/signup_view
 import 'package:e_learning/Features/courses/presentation/view/add_course_view.dart';
 import 'package:e_learning/Features/home/presentation/view/home_view.dart';
 import 'package:go_router/go_router.dart';
+import '../../Features/Message/presentation/view/search_student_view.dart';
 import '../../Features/QrCode/presentation/view/add_Qrcode_view.dart';
 import '../../Features/QrCode/presentation/view/course_list_view.dart';
 import '../../Features/QrCode/presentation/view/qrcode_list_view.dart';
@@ -24,6 +25,7 @@ abstract class AppRouter {
   static const kAddQrCodeView="/AddQrCodeView";
   static const kQrCodeView="/QrCodeView";
   static const kStudentAttendanceView="/StudentAttendanceView";
+  static const kSearchStudentView="/SearchStudentView";
   static final router = GoRouter(
     routes: [
       GoRoute(
@@ -73,6 +75,11 @@ abstract class AppRouter {
         path:kStudentAttendanceView  ,
         builder: (context, state) => const StudentAttendanceView(),
       ),
+      GoRoute(
+        path:kSearchStudentView  ,
+        builder: (context, state) => const  SearchStudentView(),
+      ),
+
 
     ],
   );
