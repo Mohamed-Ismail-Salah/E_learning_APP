@@ -1,4 +1,5 @@
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:e_learning/Core/Utils/styles.dart';
 import 'package:e_learning/Features/Message/data/models/student_inf_model.dart';
 import 'package:flutter/material.dart';
@@ -23,15 +24,26 @@ class StudentDetailsBody extends StatelessWidget{
          children:   [
 
 
-           const CircleAvatar(
-             radius: 80,
 
-             backgroundImage: NetworkImage("https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=580&q=80"),
+           Padding(
+             padding: const EdgeInsets.all(15),
+             child:SizedBox(
+               height: MediaQuery.of(context).size.height*.13,
+               width: MediaQuery.of(context).size.height*.13,
+               child: CachedNetworkImage(
+
+                 imageUrl:"https://what-a-sito.000webhostapp.com/user_imgs/${inf!.img}",
+                 placeholder: (context, image) => const CircularProgressIndicator(),
+                 errorWidget: (context, image, error) =>  Image.asset("assets/images/user.png"),
+                 fit: BoxFit.fill,
+               ),
+             ),
+
            ),
 
            const SizedBox(height: 16.0),
            Text(
-              inf!.name,
+              inf.name,
              style:  Styles.textStyle25.copyWith(fontWeight: FontWeight.w900)
            ),
              SizedBox(height: MediaQuery.of(context).size.height*.1),

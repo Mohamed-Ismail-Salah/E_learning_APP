@@ -5,6 +5,8 @@ class AppTextFormField extends StatelessWidget {
   final Widget  ?suffixIcon;
   final Widget  ?prefixIcon;
   final String? hintText;
+
+  final String? initialValue;
   final TextInputType? keyboardType;
   final Function? validator;
   final FocusNode? focusNode;
@@ -20,14 +22,15 @@ class AppTextFormField extends StatelessWidget {
       this.validator,
         this.suffixIcon,
         this.prefixIcon,
-        this.onChanged
+        this.onChanged,
+        this.initialValue
       })
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-
+      initialValue:initialValue,
       controller: ctrl,
       keyboardType: keyboardType,
       focusNode: focusNode,

@@ -5,6 +5,7 @@ import 'package:e_learning/Features/courses/presentation/view/add_course_view.da
 import 'package:e_learning/Features/home/presentation/view/home_view.dart';
 import 'package:go_router/go_router.dart';
 import '../../Features/Message/presentation/view/search_student_view.dart';
+import '../../Features/Message/presentation/view/send_message_view.dart';
 import '../../Features/Message/presentation/view/student_details_view.dart';
 import '../../Features/QrCode/presentation/view/add_Qrcode_view.dart';
 import '../../Features/QrCode/presentation/view/course_list_view.dart';
@@ -13,6 +14,8 @@ import '../../Features/QrCode/presentation/view/qrcode_view.dart';
 import '../../Features/QrCode/presentation/view/student_attendance_view.dart';
 import '../../Features/Splash/Splash_view.dart';
 import '../../Features/courses/presentation/view/courses_view.dart';
+import '../../Features/porfile/presentation/view/edit_profile_viwe.dart';
+import '../../Features/porfile/presentation/view/profile_view.dart';
 
 abstract class AppRouter {
   static const kAccessPremissionsView = '/AccessPremissionsView';
@@ -28,6 +31,9 @@ abstract class AppRouter {
   static const kStudentAttendanceView="/StudentAttendanceView";
   static const kSearchStudentView="/SearchStudentView";
   static const kStudentDetailsView="/StudentDetailsView";
+  static const kProfileView="/ProfileView";
+  static const kEditProfileView= "/EditProfileView";
+  static const kSendMessageView="/SendMessageView";
   static final router = GoRouter(
     routes: [
       GoRoute(
@@ -84,6 +90,18 @@ abstract class AppRouter {
       GoRoute(
         path:kStudentDetailsView  ,
         builder: (context, state) => const StudentDetailsView(),
+      ),
+      GoRoute(
+        path:kProfileView  ,
+        builder: (context, state) => const ProfileView(),
+      ),
+      GoRoute(
+        path:kEditProfileView  ,
+        builder: (context, state) => const EditProfileView(),
+      ),
+      GoRoute(
+        path:kSendMessageView  ,
+        builder: (context, state) => const SendMessageView(),
       ),
 
 
