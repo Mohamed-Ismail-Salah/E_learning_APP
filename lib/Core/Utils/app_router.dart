@@ -13,7 +13,11 @@ import '../../Features/QrCode/presentation/view/qrcode_list_view.dart';
 import '../../Features/QrCode/presentation/view/qrcode_view.dart';
 import '../../Features/QrCode/presentation/view/student_attendance_view.dart';
 import '../../Features/Splash/Splash_view.dart';
+import '../../Features/courses/presentation/view/add_assignment_view.dart';
+import '../../Features/courses/presentation/view/course_data_view.dart';
 import '../../Features/courses/presentation/view/courses_view.dart';
+import '../../Features/courses/presentation/view/create_assignment _view.dart';
+import '../../Features/courses/presentation/view/update_course_view.dart';
 import '../../Features/porfile/presentation/view/edit_profile_viwe.dart';
 import '../../Features/porfile/presentation/view/profile_view.dart';
 
@@ -34,6 +38,10 @@ abstract class AppRouter {
   static const kProfileView="/ProfileView";
   static const kEditProfileView= "/EditProfileView";
   static const kSendMessageView="/SendMessageView";
+  static const kUpdateCourseView="/UpdateCourseView";
+  static const kCourseDataView= "/CourseDataView";
+  static const kAddAssignmentView= "/AddAssignmentView";
+  static const kCreateAssignment= "/CreateAssignment";
   static final router = GoRouter(
     routes: [
       GoRoute(
@@ -103,8 +111,22 @@ abstract class AppRouter {
         path:kSendMessageView  ,
         builder: (context, state) => const SendMessageView(),
       ),
-
-
+      GoRoute(
+        path:kUpdateCourseView  ,
+        builder: (context, state) => const  UpdateCourseView(),
+      ),
+      GoRoute(
+        path:kCourseDataView  ,
+        builder: (context, state) => const   CourseDataView(),
+      ),
+      GoRoute(
+        path:kAddAssignmentView  ,
+        builder: (context, state) => const AddAssignmentView(),
+      ),
+      GoRoute(
+        path:kCreateAssignment ,
+        builder: (context, state) => const  CreateAssignmentView(),
+      ),
 
     ],
   );

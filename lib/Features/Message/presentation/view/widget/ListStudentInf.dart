@@ -26,8 +26,7 @@ class ListStudentInf extends StatelessWidget {
                   },
                 ),
               );
-            } else if (state is GetStudentFailure) {
-             // return Text('An error occurred: ${state.errMessage}');
+            } else if (state is GetStudentFailure) {return Text('An error occurred: ${state.errMessage}');
             }
 
             return Container();

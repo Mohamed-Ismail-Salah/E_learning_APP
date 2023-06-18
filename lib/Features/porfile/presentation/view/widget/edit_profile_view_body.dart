@@ -16,7 +16,7 @@ class EditProfileBody extends StatelessWidget{
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children:   [
-            UserImage(widthimg:   MediaQuery.of(context).size.width*.15, heightimg:  MediaQuery.of(context).size.height*.15,),
+            UserImage(widthImg:   MediaQuery.of(context).size.width*.15, heightImg:  MediaQuery.of(context).size.height*.15, img: '',),
             const AppTextFormField(
               hintText: "name",
 initialValue: "admin name",

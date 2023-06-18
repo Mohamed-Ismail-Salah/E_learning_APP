@@ -32,7 +32,7 @@ class StudentDetailsBody extends StatelessWidget{
                width: MediaQuery.of(context).size.height*.13,
                child: CachedNetworkImage(
 
-                 imageUrl:"https://what-a-sito.000webhostapp.com/user_imgs/${inf!.img}",
+                 imageUrl:"https://what-a-sito.000webhostapp.com/user_img/${inf!.img}",
                  placeholder: (context, image) => const CircularProgressIndicator(),
                  errorWidget: (context, image, error) =>  Image.asset("assets/images/user.png"),
                  fit: BoxFit.fill,
@@ -52,7 +52,7 @@ class StudentDetailsBody extends StatelessWidget{
            SizedBox(height: MediaQuery.of(context).size.height*.02),
            DetailsItem(disc: 'phone : ', info: inf.phone,),
           SizedBox(height: MediaQuery.of(context).size.height*.02),
-           DetailsItem(disc: 'parent_phone : ', info: inf.parentPhone,),
+           DetailsItem(disc: 'parent_phone : ', info: inf.fatherPhone,),
 
            SizedBox(height: MediaQuery.of(context).size.height*.15),
            const MessageButtons(),

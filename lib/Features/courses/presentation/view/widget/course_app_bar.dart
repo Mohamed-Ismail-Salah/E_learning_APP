@@ -4,17 +4,20 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../../Core/Utils/styles.dart';
 
-class CourseAppBar extends StatelessWidget {
-  const CourseAppBar({
+class AppBarWidget extends StatelessWidget {
+    AppBarWidget({
     super.key,
+    required this.page,
+    required this.title
   });
-
+String title;
+String page;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          "Courses",
+          title,
           style: Styles.textStyle25,
         ),
         const Spacer(),
@@ -22,7 +25,7 @@ class CourseAppBar extends StatelessWidget {
           icon: const Icon(Icons.add_circle,
               color: Colors.black, size: 50),
           onPressed: () {
-            context.pushReplacement(AppRouter.kAddCourseView);
+            context.push(page);
           },
         ),
       ],

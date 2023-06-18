@@ -22,6 +22,8 @@ import 'Features/QrCode/data/repos/get_allQrcode_repos/get_courses_repo_implemnt
 import 'Features/QrCode/presentation/view_models/Qrcode_cubit/qr_code_cubit.dart';
 import 'Features/courses/presentation/view_models/image_picker_cubit/image_picker_cubit.dart';
 import 'Features/courses/presentation/view_models/update_courses_cubit/update_courses_cubit.dart';
+import 'Features/porfile/data/get_porfile_info/get_porfile_info_imp.dart';
+import 'Features/porfile/presentation/view_models/get_profile_info_cubit/get_profile_ifo_cubit.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +39,9 @@ class MyApp extends StatelessWidget {
         BlocProvider(
             create: (context) =>
                 LoginAdminCubit(LoginAdminRepoImp(ApiService(Dio())))),
+        BlocProvider(
+            create: (context) =>
+                GetProfileIfoCubit(GetProfileIfoImp(ApiService(Dio())))..getProfileInf()),
     BlocProvider(
     create:(context) => GetStudentCubit(GetStudentIfImpRepo(ApiService(Dio())))),
         BlocProvider(

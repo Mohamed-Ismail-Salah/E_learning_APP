@@ -3,22 +3,23 @@ import 'package:flutter/material.dart';
 
 class UserImage extends StatelessWidget {
     UserImage({super.key,
-    required this.widthimg,
-    required this.heightimg
-
+    required this.widthImg,
+    required this.heightImg,
+      required  this.img
   });
-double heightimg;
-  double widthimg;
+double heightImg;
+  double widthImg;
+  String img;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(15),
       child:SizedBox(
-        height: heightimg,
-        width:  widthimg,
+        height: heightImg,
+        width:  widthImg,
         child: CachedNetworkImage(
 
-          imageUrl:"https://what-a-sito.000webhostapp.com/user_imgs/",
+          imageUrl:"https://what-a-sito.000webhostapp.com/$img",
           placeholder: (context, image) =>  const CircularProgressIndicator(
 
 

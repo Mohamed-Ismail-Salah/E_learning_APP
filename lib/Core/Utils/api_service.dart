@@ -14,6 +14,10 @@ class ApiService {
     return response.data;
   }
 
+  Future<Map<String,dynamic>> getMapUsingHeaders({required String endpoint,required Map<String, String> headers }) async {
+    var response = await dio.get('$_baseUrl$endpoint',options: Options(headers: headers));
+    return response.data;
+  }
 
 
   Future<Map<String, dynamic>> post(

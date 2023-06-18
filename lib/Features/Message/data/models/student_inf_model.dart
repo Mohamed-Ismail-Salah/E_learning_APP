@@ -2,16 +2,17 @@ class StudentInfModel {
   int id;
   String name;
   String email;
-  DateTime? emailVerifiedAt; // Updated to be nullable
+  DateTime? emailVerifiedAt;
   String ssn;
   String img;
   String phone;
   int departmentId;
-  String? apiToken; // Updated to be nullable
+  String? apiToken;
   DateTime createdAt;
   DateTime updatedAt;
   String passwordConfirmation;
-  String parentPhone;
+  String fatherPhone;
+  String? fatherEmail;
   String universityEmail;
 
   StudentInfModel({
@@ -27,7 +28,8 @@ class StudentInfModel {
     required this.createdAt,
     required this.updatedAt,
     required this.passwordConfirmation,
-    required this.parentPhone,
+    required this.fatherPhone,
+    this.fatherEmail,
     required this.universityEmail,
   });
 
@@ -43,11 +45,12 @@ class StudentInfModel {
       img: json['img'],
       phone: json['phone'],
       departmentId: json['department_id'],
-      apiToken: json['api_token'],
+      apiToken: json['api_token']?.toString(),
       createdAt: DateTime.parse(json['created_at']),
       updatedAt: DateTime.parse(json['updated_at']),
       passwordConfirmation: json['password_confirmation'],
-      parentPhone: json['parent_phone'],
+      fatherPhone: json['father_phone'],
+      fatherEmail: json['father_email']?.toString(),
       universityEmail: json['university_email'],
     );
   }
