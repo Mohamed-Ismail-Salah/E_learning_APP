@@ -22,8 +22,8 @@ import 'Features/QrCode/data/repos/get_allQrcode_repos/get_courses_repo_implemnt
 import 'Features/QrCode/presentation/view_models/Qrcode_cubit/qr_code_cubit.dart';
 import 'Features/courses/presentation/view_models/image_picker_cubit/image_picker_cubit.dart';
 import 'Features/courses/presentation/view_models/update_courses_cubit/update_courses_cubit.dart';
-import 'Features/porfile/data/get_porfile_info/get_porfile_info_imp.dart';
-import 'Features/porfile/presentation/view_models/get_profile_info_cubit/get_profile_ifo_cubit.dart';
+ import 'Features/profile/data/get_profile_info/get_profile_info_imp.dart';
+import 'Features/profile/presentation/view_models/get_profile_info_cubit/get_profile_ifo_cubit.dart';
 
 void main() {
   runApp(const MyApp());

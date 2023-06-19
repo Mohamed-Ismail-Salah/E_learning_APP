@@ -1,8 +1,8 @@
 import 'package:bloc/bloc.dart';
-import 'package:e_learning/Features/porfile/data/models/porfile_info_model.dart';
-import 'package:meta/meta.dart';
+ import 'package:meta/meta.dart';
 
-import '../../../data/get_porfile_info/get_porfile_info_repo.dart';
+ import '../../../data/get_profile_info/get_porfile_info_repo.dart';
+import '../../../data/models/profile_info_model.dart';
 
 part 'get_profile_ifo_state.dart';
 

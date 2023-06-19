@@ -6,6 +6,7 @@ import 'package:go_router/go_router.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../../../../../Core/Utils/app_router.dart';
 import '../../../../../Core/widgets/Show_Snackbar.dart';
+import '../../view_models/update_courses_cubit/update_courses_cubit.dart';
 import 'inpout_add_course.dart';
 import 'inpout_update_course.dart';
 
@@ -15,15 +16,15 @@ class  UpdateCourseBody extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     bool isLoading = false;
-     return  BlocConsumer<AddCoursesCubit, AddCoursesState>(
+     return  BlocConsumer<UpdateCoursesCubit, UpdateCoursesState>(
         listener: (context, state) async{
-      if (state is AddCoursesLoading) {
+      if (state is UpdateCoursesLoading) {
         isLoading = true;
-      } else if (state is AddCoursesSuccess) {
+      } else if (state is UpdateCoursesSuccess) {
         context.pushReplacement(AppRouter.kCoursesView);
 
         isLoading = false;
-      }else if(state is AddCoursesFailure){
+      }else if(state is UpdateCoursesFailure){
         isLoading = false;
         showSnackBar(context, state.errMessage);
 

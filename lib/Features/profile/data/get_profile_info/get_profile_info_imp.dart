@@ -6,7 +6,7 @@ import 'package:dio/dio.dart';
 import '../../../../Core/Utils/api_service.dart';
 import '../../../../Core/Utils/app_shared_preferences.dart';
 import '../../../../Core/error/faliure.dart';
-import '../models/porfile_info_model.dart';
+import '../models/profile_info_model.dart';
 import 'get_porfile_info_repo.dart';
 
 class GetProfileIfoImp implements GetProfileInfRepo  {

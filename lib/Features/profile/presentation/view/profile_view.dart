@@ -1,5 +1,5 @@
 
-import 'package:e_learning/Features/porfile/presentation/view/widget/Profile_view_body.dart';
+ import 'package:e_learning/Features/profile/presentation/view/widget/Profile_view_body.dart';
 import 'package:flutter/material.dart';
 
 class ProfileView extends StatelessWidget{

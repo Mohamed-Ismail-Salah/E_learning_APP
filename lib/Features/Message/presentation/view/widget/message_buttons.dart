@@ -18,13 +18,18 @@ class MessageButtons extends StatelessWidget {
             textStyle: Styles.textStyle17.copyWith(color: Colors.black),
             name: "Send Message to student",
             onTap:  (){
-              context.push(AppRouter.kSendMessageView);
+              context.push(AppRouter.kSendMessageView,extra:"toStudent");
             }),
         const SizedBox(height: 20,),
         CustomButton(
             textStyle: Styles.textStyle17.copyWith(color: Colors.black),
             name: "Send Message to parent",
-            onTap:  (){}),
+            onTap:  (){
+              context.push(AppRouter.kSendMessageView
+                  ,extra:"toParent"
+              );
+
+            }),
       ],
     );
   }

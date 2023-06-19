@@ -1,8 +1,8 @@
 import 'package:e_learning/Core/Utils/app_router.dart';
 import 'package:e_learning/Core/Utils/styles.dart';
 import 'package:e_learning/Core/widgets/custom_button.dart';
-import 'package:e_learning/Features/porfile/presentation/view/widget/user_Image.dart';
-import 'package:flutter/material.dart';
+import 'package:e_learning/Features/profile/presentation/view/widget/user_Image.dart';
+ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
@@ -52,7 +52,9 @@ class ProfileViewBody extends StatelessWidget{
                CustomButton(
                    name: " Edit Profile  🖊",
                    onTap: () {
-                     context.push(AppRouter.kEditProfileView);
+                     context.push(AppRouter.kEditProfileView,
+               extra: state.profileInf
+                     );
                    })
 
 

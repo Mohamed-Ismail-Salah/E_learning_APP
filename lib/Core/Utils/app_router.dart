@@ -3,7 +3,7 @@ import 'package:e_learning/Features/Authentication/presentation/view/login_view.
 import 'package:e_learning/Features/Authentication/presentation/view/signup_view.dart';
 import 'package:e_learning/Features/courses/presentation/view/add_course_view.dart';
 import 'package:e_learning/Features/home/presentation/view/home_view.dart';
-import 'package:go_router/go_router.dart';
+ import 'package:go_router/go_router.dart';
 import '../../Features/Message/presentation/view/search_student_view.dart';
 import '../../Features/Message/presentation/view/send_message_view.dart';
 import '../../Features/Message/presentation/view/student_details_view.dart';
@@ -13,13 +13,16 @@ import '../../Features/QrCode/presentation/view/qrcode_list_view.dart';
 import '../../Features/QrCode/presentation/view/qrcode_view.dart';
 import '../../Features/QrCode/presentation/view/student_attendance_view.dart';
 import '../../Features/Splash/Splash_view.dart';
+import '../../Features/courses/presentation/view/add_Attachment_view.dart';
 import '../../Features/courses/presentation/view/add_assignment_view.dart';
+import '../../Features/courses/presentation/view/all_Attachment_view.dart';
 import '../../Features/courses/presentation/view/course_data_view.dart';
 import '../../Features/courses/presentation/view/courses_view.dart';
 import '../../Features/courses/presentation/view/create_assignment _view.dart';
 import '../../Features/courses/presentation/view/update_course_view.dart';
-import '../../Features/porfile/presentation/view/edit_profile_viwe.dart';
-import '../../Features/porfile/presentation/view/profile_view.dart';
+import '../../Features/profile/data/models/profile_info_model.dart';
+import '../../Features/profile/presentation/view/edit_profile_viwe.dart';
+import '../../Features/profile/presentation/view/profile_view.dart';
 
 abstract class AppRouter {
   static const kAccessPremissionsView = '/AccessPremissionsView';
@@ -42,6 +45,8 @@ abstract class AppRouter {
   static const kCourseDataView= "/CourseDataView";
   static const kAddAssignmentView= "/AddAssignmentView";
   static const kCreateAssignment= "/CreateAssignment";
+  static const kAllAttachmentView= "/AllAttachmentView";
+  static const kAddAttachmentView="/AddAttachmentView";
   static final router = GoRouter(
     routes: [
       GoRoute(
@@ -105,11 +110,16 @@ abstract class AppRouter {
       ),
       GoRoute(
         path:kEditProfileView  ,
-        builder: (context, state) => const EditProfileView(),
+        builder: (context, state) =>     EditProfileView(
+          profileInfoModel:  state.extra as ProfileInfoModel ,
+
+         ),
       ),
       GoRoute(
         path:kSendMessageView  ,
-        builder: (context, state) => const SendMessageView(),
+        builder: (context, state) =>   SendMessageView(
+          sendTo: state.extra as String,
+        ),
       ),
       GoRoute(
         path:kUpdateCourseView  ,
@@ -128,6 +138,15 @@ abstract class AppRouter {
         builder: (context, state) => const  CreateAssignmentView(),
       ),
 
+      GoRoute(
+        path:kAllAttachmentView ,
+        builder: (context, state) => const  AllAttachmentView(),
+      ),
+
+      GoRoute(
+        path:kAddAttachmentView ,
+        builder: (context, state) => const  AddAttachmentView(),
+      ),
     ],
   );
 }

@@ -13,10 +13,12 @@ class StudentItem extends StatelessWidget {
     required this.name,
     required this.email,
 
+
   });
+   StudentInfModel studentInfModel;
   String name;
   String email;
-StudentInfModel studentInfModel;
+
   @override
   Widget build(BuildContext context) {
     return  GestureDetector(

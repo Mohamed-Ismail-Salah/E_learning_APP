@@ -18,7 +18,7 @@ class CourseDataBody extends StatelessWidget{
       ),
       SizedBox(height: MediaQuery.of(context).size.height*.1,),
       Option(img: 'assets/images/book-stack.png',
-        page: '',
+        page:  AppRouter.kAllAttachmentView,
         title: 'Add Attachment',
       ),
     ],
