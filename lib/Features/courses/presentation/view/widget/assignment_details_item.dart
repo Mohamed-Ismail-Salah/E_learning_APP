@@ -1,11 +1,13 @@
 import 'package:e_learning/Core/Utils/styles.dart';
+import 'package:e_learning/Features/courses/data/models/Assignment_modle.dart';
 import 'package:flutter/material.dart';
 
 class AssignmentDetailsItem extends StatelessWidget {
-  const AssignmentDetailsItem({
+    AssignmentDetailsItem({
     super.key,
+      required this.assignmentModel
   });
-
+AssignmentModel assignmentModel;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -32,7 +34,7 @@ class AssignmentDetailsItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Course Title',
+                  assignmentModel.title,
                   style:  Styles.textStyle17.copyWith(fontWeight: FontWeight.w900),
                 ),
                 const SizedBox(height: 8),
@@ -41,7 +43,7 @@ class AssignmentDetailsItem extends StatelessWidget {
                     const Icon(Icons.description, size: 16, color: Colors.grey),
                     const SizedBox(width: 8),
                     Text(
-                      'Course Description',
+                      assignmentModel.desc??"",
                       style:  Styles.textStyle16
                     ),
                   ],

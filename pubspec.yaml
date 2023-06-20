@@ -29,6 +29,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   file_picker:
+  url_launcher:
   location:
   qr_flutter:
   shared_preferences:

@@ -13,12 +13,12 @@ class ImagePickerButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     File? imageFile;
-    return BlocConsumer<ImagePickerCubit, ImagePickerState>(
+    return BlocConsumer<FilePickerCubit, FilePickerState>(
       listener:(context, state){
-        if(state is ImagePickerLoaded){
-          imageFile=  state.imageFile;
+        if(state is FilePickerLoaded){
+          imageFile=  state.selectedFile;
           print(imageFile);
-        }else if(state is ImagePickerError){
+        }else if(state is FilePickerError){
           print(state.errMessage);
         }
       },
@@ -40,7 +40,7 @@ class ImagePickerButton extends StatelessWidget {
                           title: const Text('Photo Library'),
                           onTap: () async {
                             Navigator.pop(context);
-                             BlocProvider.of<ImagePickerCubit>(context).pickImage(ImageSource.gallery);
+                             BlocProvider.of<FilePickerCubit>(context).pickImage(ImageSource.gallery);
 
                           },
 
@@ -50,7 +50,7 @@ class ImagePickerButton extends StatelessWidget {
                           title: const Text('Camera'),
                           onTap: () async {
                             Navigator.pop(context);
-                             BlocProvider.of<ImagePickerCubit>(context).pickImage(ImageSource.camera);
+                             BlocProvider.of<FilePickerCubit>(context).pickImage(ImageSource.camera);
 
                           },
                         ),

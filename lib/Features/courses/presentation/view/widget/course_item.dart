@@ -2,19 +2,25 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:e_learning/Core/Utils/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
  import '../../../../../Core/Utils/styles.dart';
+import '../../view_models/get_courses_cubit/getcourses_cubit.dart';
 
 class CourseItem extends StatelessWidget {
-    CourseItem({super.key,required this.image,required this.courseName});
+    CourseItem({super.key,required this.image,required this.courseName,required this.id,required this.code});
 
 String image;
 String courseName;
+ int id;
+ String code;
   @override
   Widget build(BuildContext context) {
 
     return  GestureDetector(
       onTap: (){
+        BlocProvider.of<GetCoursesCubit>(context).setCourseId(id);
+        BlocProvider.of<GetCoursesCubit>(context).setCode(code);
 context.push(AppRouter.kCourseDataView);
       },
       child: Padding(

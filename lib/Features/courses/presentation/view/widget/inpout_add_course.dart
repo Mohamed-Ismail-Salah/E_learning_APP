@@ -139,7 +139,7 @@ class InPoutAddCourse extends StatelessWidget {
                         termCourse!,
                         hoursCourse!,
                         codeCourse!,
-                        BlocProvider.of<ImagePickerCubit>(context).imageFile!);
+                        BlocProvider.of<FilePickerCubit>(context).imageFile!);
                   }
                   BlocProvider.of<GetCoursesCubit>(context).getAllCourses();
                 },

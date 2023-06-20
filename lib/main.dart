@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
             create: (context) =>
                 GetCoursesCubit(GetCoursesRepoImp(ApiService(Dio())))
                   ..getAllCourses()),
-        BlocProvider(create: (context) => ImagePickerCubit()),
+        BlocProvider(create: (context) => FilePickerCubit()),
         BlocProvider(
           create: (context) => QrCodeCubit(
               GetQrAllCodeRepoImp(ApiService(Dio())),

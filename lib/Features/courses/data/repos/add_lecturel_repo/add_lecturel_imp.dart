@@ -1,40 +1,40 @@
 import 'dart:io';
- import 'package:dio/dio.dart';
- import '../../../../../../Core/Utils/api_service.dart';
+import 'package:dio/dio.dart';
+import '../../../../../../Core/Utils/api_service.dart';
 import '../../../../../../Core/error/faliure.dart';
 import '../../../../../Core/Utils/app_shared_preferences.dart';
-import 'add_assignment_repo.dart';
+import 'add_lecturel_repo.dart';
 
-class AddAssignmentImp implements AddAssignmentRepo {
+class AddLecturesImp implements AddLecturesRepo {
   final ApiService apiService;
-  AddAssignmentImp(this.apiService);
+  AddLecturesImp(this.apiService);
 
   @override
-  Future<Failure?>  addAssignment(
+  Future<Failure?>  addLectures(
       String title,
       File? file,
-      String courseId,
-      String desc,
+      String code,
+      String? link,
 
       ) async {
     try {
       FormData formData =
       FormData.fromMap({
         "title": title,
-        "course_id":courseId ,
-        "desc": desc,
+        "code":code ,
+        "link": link,
         "file": file != null ? await MultipartFile.fromFile(file.path) : null,});
       final tokenStorage = TokenStorage();
       String? token = await tokenStorage.getToken();
-        await apiService.postUsingHeaders(endpoint:"lecture_assignment",
+      await apiService.postUsingHeaders(endpoint:"lectures",
           data:formData,headers: {
 
-        'Authorization': 'Bearer $token',
-        'Content-Type': 'multipart/form-data',
-      });
+            'Authorization': 'Bearer $token',
+            'Content-Type': 'multipart/form-data',
+          });
 
 
-      return null; // Return appropriate Failure object or null
+      return null;
     } catch (e) {
       if (e is DioError) {
         return ServerFailure.fromDioError(e);

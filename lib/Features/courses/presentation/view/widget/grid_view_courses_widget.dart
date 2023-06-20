@@ -21,7 +21,11 @@ class GridViewCourseWidget extends StatelessWidget {
                     childAspectRatio: 1,
                   ),
                   itemBuilder: (BuildContext context, int index) {
-                    return   CourseItem(image:state.allCourse[index].img, courseName: state.allCourse[index].name,);
+                    return   CourseItem(
+                      code:state.allCourse[index].code,
+                      id: state.allCourse[index].id ,
+                      image:state.allCourse[index].img,
+                      courseName: state.allCourse[index].name,);
 
                   }
               ),

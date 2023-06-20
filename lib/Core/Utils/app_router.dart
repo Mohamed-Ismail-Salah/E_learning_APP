@@ -1,6 +1,7 @@
 import 'package:e_learning/Features/Authentication/presentation/view/accesspremissions_view.dart';
 import 'package:e_learning/Features/Authentication/presentation/view/login_view.dart';
 import 'package:e_learning/Features/Authentication/presentation/view/signup_view.dart';
+import 'package:e_learning/Features/courses/data/models/all_lecture.dart';
 import 'package:e_learning/Features/courses/presentation/view/add_course_view.dart';
 import 'package:e_learning/Features/home/presentation/view/home_view.dart';
  import 'package:go_router/go_router.dart';
@@ -19,6 +20,7 @@ import '../../Features/courses/presentation/view/all_Attachment_view.dart';
 import '../../Features/courses/presentation/view/course_data_view.dart';
 import '../../Features/courses/presentation/view/courses_view.dart';
 import '../../Features/courses/presentation/view/create_assignment _view.dart';
+import '../../Features/courses/presentation/view/lecturel_data_view.dart';
 import '../../Features/courses/presentation/view/update_course_view.dart';
 import '../../Features/profile/data/models/profile_info_model.dart';
 import '../../Features/profile/presentation/view/edit_profile_viwe.dart';
@@ -47,6 +49,7 @@ abstract class AppRouter {
   static const kCreateAssignment= "/CreateAssignment";
   static const kAllAttachmentView= "/AllAttachmentView";
   static const kAddAttachmentView="/AddAttachmentView";
+  static const kLectureDataView= "/LectureDataView";
   static final router = GoRouter(
     routes: [
       GoRoute(
@@ -146,6 +149,10 @@ abstract class AppRouter {
       GoRoute(
         path:kAddAttachmentView ,
         builder: (context, state) => const  AddAttachmentView(),
+      ),
+      GoRoute(
+        path:kLectureDataView ,
+        builder: (context, state) =>   LectureDataView(lecture:  state.extra as LectureModel,),
       ),
     ],
   );

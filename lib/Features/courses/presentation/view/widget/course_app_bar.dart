@@ -25,7 +25,7 @@ String page;
           icon: const Icon(Icons.add_circle,
               color: Colors.black, size: 50),
           onPressed: () {
-            context.push(page);
+            context.pushReplacement(page);
           },
         ),
       ],

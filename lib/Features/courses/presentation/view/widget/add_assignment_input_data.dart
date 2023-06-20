@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../Core/Utils/styles.dart';
 import '../../../../../Core/widgets/custom_button.dart';
 import '../../../../../Core/widgets/custom_textformfield.dart';
+import '../../view_models/get_courses_cubit/getcourses_cubit.dart';
 
 class AddAssignmentInputData extends StatelessWidget {
 
@@ -124,10 +125,10 @@ class AddAssignmentInputData extends StatelessWidget {
                 if (formKey.currentState?.validate() == true) {
                   title = titleController.text;
                   desc = descController.text;
+               int? id =BlocProvider.of<GetCoursesCubit>(context).getCourseId();
 
-
-                    BlocProvider.of<AddAssignmentCubit>(context)
-                        .addAssignment(title!, file, "2", desc!);
+                  BlocProvider.of<AddAssignmentCubit>(context)
+                        .addAssignment(title!, file, "${id!}", desc!);
                   }
                 }
               )

@@ -1,17 +1,19 @@
 part of 'image_picker_cubit.dart';
 
 @immutable
-abstract class ImagePickerState {}
+abstract class FilePickerState {}
 
-class ImagePickerInitial extends ImagePickerState {}
-class ImagePickerLoaded extends ImagePickerState {
-  final File imageFile;
+class FilePickerInitial extends FilePickerState {}
+class FilePickerLoading extends FilePickerState {}
 
-  ImagePickerLoaded(this.imageFile);
+class FilePickerLoaded extends FilePickerState {
+  final File selectedFile;
+
+  FilePickerLoaded(this.selectedFile);
 
 }
-class ImagePickerError extends ImagePickerState {
+class FilePickerError extends FilePickerState {
   final String errMessage;
 
-  ImagePickerError(this.errMessage);
+  FilePickerError(this.errMessage);
 }
