@@ -1,10 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:e_learning/Core/Utils/api_service.dart';
 import 'package:e_learning/Core/Utils/app_theme.dart';
-import 'package:e_learning/Features/Authentication/data/repos/loginRepos/login_admin_repo_implemntaion.dart';
-import 'package:e_learning/Features/Authentication/data/repos/signupRepos/signup_admin_repo_implemntaion.dart';
-import 'package:e_learning/Features/Authentication/presentation/view_models/login_cubit/login_admin_cubit.dart';
-import 'package:e_learning/Features/Authentication/presentation/view_models/signup_cubit/sign_up_admin_cubit.dart';
 import 'package:e_learning/Features/QrCode/data/repos/addQrCodeRepos/addQrcode_repo_implemntaion.dart';
 import 'package:e_learning/Features/QrCode/presentation/view_models/add_QrCode_cubit/add_qr_code_cubit.dart';
 import 'package:e_learning/Features/courses/data/repos/add_courses_repos/add_courses_repo_implemntaion.dart';
@@ -15,6 +11,14 @@ import 'package:e_learning/Features/courses/presentation/view_models/get_courses
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'Core/Utils/app_router.dart';
+import 'Features/Authentication/AdminAuthentication/data/repos/loginRepos/login_admin_repo_implemntaion.dart';
+import 'Features/Authentication/AdminAuthentication/data/repos/signupRepos/signup_admin_repo_implemntaion.dart';
+import 'Features/Authentication/AdminAuthentication/presentation/view_models/login_cubit/login_admin_cubit.dart';
+import 'Features/Authentication/AdminAuthentication/presentation/view_models/signup_cubit/sign_up_admin_cubit.dart';
+import 'Features/Authentication/studentsAuthentication/data/repos/loginRepos/login_student_repo_implemntaion.dart';
+import 'Features/Authentication/studentsAuthentication/data/repos/signupRepos/signup_student_repo_implemntaion.dart';
+import 'Features/Authentication/studentsAuthentication/presentation/view_models/login_cubit/login_Student_cubit.dart';
+import 'Features/Authentication/studentsAuthentication/presentation/view_models/signup_cubit/sign_up_Student_cubit.dart';
 import 'Features/Message/data/get_student_inf/get_student_inf_imple.dart';
 import 'Features/Message/presentation/view_models/get_student_cubit/get_student_cubit.dart';
 import 'Features/QrCode/data/repos/get_Student_Attendance/get_Student_attendance_repo_implemntaion.dart';
@@ -41,12 +45,18 @@ class MyApp extends StatelessWidget {
                 LoginAdminCubit(LoginAdminRepoImp(ApiService(Dio())))),
         BlocProvider(
             create: (context) =>
+                LoginStudentCubit( LoginStudentRepoImp(ApiService(Dio())))),
+        BlocProvider(
+            create: (context) =>
                 GetProfileIfoCubit(GetProfileIfoImp(ApiService(Dio())))..getProfileInf()),
     BlocProvider(
     create:(context) => GetStudentCubit(GetStudentIfImpRepo(ApiService(Dio())))),
         BlocProvider(
             create: (context) =>
                 SignUpAdminCubit(SignUpAdminRepoImp(ApiService(Dio())))),
+        BlocProvider(
+            create: (context) =>
+                SignUpStudentCubit(SignUpStudentRepoImp(ApiService(Dio())))),
         BlocProvider(
             create: (context) =>
                 AddCoursesCubit(AddCoursesRepoImp(ApiService(Dio())))),

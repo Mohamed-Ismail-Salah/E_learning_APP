@@ -1,10 +1,11 @@
-import 'package:e_learning/Features/Authentication/presentation/view/accesspremissions_view.dart';
-import 'package:e_learning/Features/Authentication/presentation/view/login_view.dart';
-import 'package:e_learning/Features/Authentication/presentation/view/signup_view.dart';
-import 'package:e_learning/Features/courses/data/models/all_lecture.dart';
+ import 'package:e_learning/Features/courses/data/models/all_lecture.dart';
 import 'package:e_learning/Features/courses/presentation/view/add_course_view.dart';
-import 'package:e_learning/Features/home/presentation/view/home_view.dart';
- import 'package:go_router/go_router.dart';
+  import 'package:go_router/go_router.dart';
+import '../../Features/Authentication/AdminAuthentication/presentation/view/accesspremissions_view.dart';
+import '../../Features/Authentication/AdminAuthentication/presentation/view/login_view.dart';
+import '../../Features/Authentication/AdminAuthentication/presentation/view/signup_view.dart';
+import '../../Features/Authentication/studentsAuthentication/presentation/view/login_Student_view.dart';
+import '../../Features/Authentication/studentsAuthentication/presentation/view/signup_Student_view.dart';
 import '../../Features/Message/presentation/view/search_student_view.dart';
 import '../../Features/Message/presentation/view/send_message_view.dart';
 import '../../Features/Message/presentation/view/student_details_view.dart';
@@ -25,6 +26,8 @@ import '../../Features/courses/presentation/view/create_assignment _view.dart';
 import '../../Features/courses/presentation/view/lecturel_data_view.dart';
 import '../../Features/courses/presentation/view/update_course_view.dart';
 import '../../Features/courses/presentation/view/create_quiz_view.dart';
+import '../../Features/home/AdminHome/presentation/view/admin_home_view.dart';
+import '../../Features/home/StudentHome/presentation/view/student_home_view.dart';
 import '../../Features/profile/data/models/profile_info_model.dart';
 import '../../Features/profile/presentation/view/edit_profile_viwe.dart';
 import '../../Features/profile/presentation/view/profile_view.dart';
@@ -32,8 +35,11 @@ import '../../Features/profile/presentation/view/profile_view.dart';
 abstract class AppRouter {
   static const kAccessPremissionsView = '/AccessPremissionsView';
   static const kLoginView = '/LoginView';
-  static const kHomeView = '/HomeView';
+  static const kLoginStudentView = '/LoginStudentView';
+  static const kStudentHomeView= '/StudentHomeView';
+  static const kAdminHomeView = '/HomeView';
   static const kSignupView = '/SignupView';
+  static const kSignupStudentView="/SignupStudentView";
   static const kCoursesView = '/CoursesView';
   static const kAddCourseView = '/AddCourseView';
   static const kListCourseQrCodeView="/ListCourseQrCodeView";
@@ -71,12 +77,25 @@ abstract class AppRouter {
         builder: (context, state) => const LoginView(),
       ),
       GoRoute(
+        path: kLoginStudentView,
+        builder: (context, state) => const LoginStudentView(),
+      ),
+      GoRoute(
         path: kSignupView,
         builder: (context, state) => const SignupView(),
       ),
       GoRoute(
-        path:  kHomeView,
-        builder: (context, state) => const  HomeView(),
+        path: kSignupStudentView,
+        builder: (context, state) => const  SignupStudentView(),
+      ),
+
+      GoRoute(
+        path:  kStudentHomeView,
+        builder: (context, state) => const StudentHomeView(),
+      ),
+      GoRoute(
+        path:  kAdminHomeView,
+        builder: (context, state) => const  AdminHomeView(),
       ),
       GoRoute(
         path:  kCoursesView,

@@ -2,7 +2,7 @@
 // import 'package:e_learning/Core/Utils/api_service.dart';
 // import 'package:get_it/get_it.dart';
 //
-// import '../../Features/Authentication/data/repos/login_admin_repo_implemntaion.dart';
+// import '../../Features/Authentication/data/repos/login_student_repo_implemntaion.dart';
 // final getIt= GetIt.instance;
 // void setup() {
 //   getIt.registerSingleton<ApiService>(

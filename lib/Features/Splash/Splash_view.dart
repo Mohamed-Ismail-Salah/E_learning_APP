@@ -36,7 +36,7 @@ class SplashView extends StatelessWidget {
                 if(token==null){
                   context.pushReplacement(AppRouter.kAccessPremissionsView);
                 }else{
-                  context.pushReplacement(AppRouter.kHomeView);
+                  context.pushReplacement(AppRouter.kAdminHomeView);
                 }
 
               },
