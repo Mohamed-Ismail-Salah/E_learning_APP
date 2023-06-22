@@ -16,12 +16,15 @@ import '../../Features/QrCode/presentation/view/student_attendance_view.dart';
 import '../../Features/Splash/Splash_view.dart';
 import '../../Features/courses/presentation/view/add_Attachment_view.dart';
 import '../../Features/courses/presentation/view/add_assignment_view.dart';
+import '../../Features/courses/presentation/view/add_question_view.dart';
 import '../../Features/courses/presentation/view/all_Attachment_view.dart';
+import '../../Features/courses/presentation/view/all_quiz_view.dart';
 import '../../Features/courses/presentation/view/course_data_view.dart';
 import '../../Features/courses/presentation/view/courses_view.dart';
 import '../../Features/courses/presentation/view/create_assignment _view.dart';
 import '../../Features/courses/presentation/view/lecturel_data_view.dart';
 import '../../Features/courses/presentation/view/update_course_view.dart';
+import '../../Features/courses/presentation/view/create_quiz_view.dart';
 import '../../Features/profile/data/models/profile_info_model.dart';
 import '../../Features/profile/presentation/view/edit_profile_viwe.dart';
 import '../../Features/profile/presentation/view/profile_view.dart';
@@ -50,6 +53,9 @@ abstract class AppRouter {
   static const kAllAttachmentView= "/AllAttachmentView";
   static const kAddAttachmentView="/AddAttachmentView";
   static const kLectureDataView= "/LectureDataView";
+  static const kCreateQuiz= "/CreateQuiz";
+  static const kAllQuizView= "/AllQuizView";
+  static const kAddQuestionView="/AddQuestionView";
   static final router = GoRouter(
     routes: [
       GoRoute(
@@ -71,23 +77,26 @@ abstract class AppRouter {
       GoRoute(
         path:  kHomeView,
         builder: (context, state) => const  HomeView(),
-      ), GoRoute(
+      ),
+      GoRoute(
         path:  kCoursesView,
         builder: (context, state) => const CoursesView(),
       ),
       GoRoute(
         path:kAddCourseView,
         builder: (context, state) => const AddCourseView(),
-      ),GoRoute(
+      ),
+      GoRoute(
         path:kListCourseQrCodeView,
         builder: (context, state) => const ListCourseQrCodeView(),
       ),
-       GoRoute(
+      GoRoute(
         path:kListQrCodeView,
         builder: (context, state) =>   const ListQrCodeView(
 
         ),
-      ), GoRoute(
+      ),
+      GoRoute(
         path:kAddQrCodeView,
         builder: (context, state) => const AddQrCodeView(),
       ),
@@ -140,12 +149,10 @@ abstract class AppRouter {
         path:kCreateAssignment ,
         builder: (context, state) => const  CreateAssignmentView(),
       ),
-
       GoRoute(
         path:kAllAttachmentView ,
         builder: (context, state) => const  AllAttachmentView(),
       ),
-
       GoRoute(
         path:kAddAttachmentView ,
         builder: (context, state) => const  AddAttachmentView(),
@@ -153,6 +160,24 @@ abstract class AppRouter {
       GoRoute(
         path:kLectureDataView ,
         builder: (context, state) =>   LectureDataView(lecture:  state.extra as LectureModel,),
+      ),
+      GoRoute(
+        path:kCreateQuiz,
+        builder: (context, state) =>  const CreateQuizView(),
+      ),
+      GoRoute(
+        path:kAllQuizView,
+        builder: (context, state) =>  const AllQuizView(),
+      ),
+      GoRoute(
+        path:kAddQuestionView,
+         builder: (context, state) =>    AddQuestionView(
+          name: state.queryParameters["name"] as String ,
+          maxTime:  int.parse(state.queryParameters["maxTime"]??"0") ,
+          maxDegree:  int.parse(state.queryParameters["maxDegree"]??"0" )  ,
+          num:  int.parse( state.queryParameters ["num"] ??"0") ,
+
+        ),
       ),
     ],
   );

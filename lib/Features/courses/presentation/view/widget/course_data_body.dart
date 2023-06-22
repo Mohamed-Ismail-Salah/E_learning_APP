@@ -21,6 +21,11 @@ class CourseDataBody extends StatelessWidget{
         page:  AppRouter.kAllAttachmentView,
         title: 'Add Attachment',
       ),
+      SizedBox(height: MediaQuery.of(context).size.height*.1,),
+      Option(img: 'assets/images/quiz.png',
+        page:  AppRouter.kAllQuizView,
+        title: 'Add Quiz',
+      ),
     ],
   );
   }

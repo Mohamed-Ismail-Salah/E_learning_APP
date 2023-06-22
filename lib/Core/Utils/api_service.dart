@@ -30,6 +30,14 @@ class ApiService {
     final response = await dio.post('$_baseUrl$endpoint', data: data,options: Options(headers: headers),);
     return response.data;
   }
+
+  Future<Map<String, dynamic>> postMapUsingHeaders(
+      {required String endpoint, required  var  data,required Map<String, String> headers}) async {
+    final response = await dio.post('$_baseUrl$endpoint', data: data,options: Options(headers: headers),);
+    return response.data;
+  }
+
+
   Future<Map<String, dynamic>> putUsingHeaders(
       {required String endpoint, required FormData data,required Map<String, String> headers}) async {
     final response = await dio.post('$_baseUrl$endpoint', data: data,options: Options(headers: headers),);

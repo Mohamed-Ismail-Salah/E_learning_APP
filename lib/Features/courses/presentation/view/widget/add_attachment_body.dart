@@ -11,7 +11,7 @@ class AddAttachmentBody extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     bool isLoading = false;
-    return BlocConsumer<  AddLecturesCubit, AddLecturesState>(
+    return BlocConsumer<AddLecturesCubit, AddLecturesState>(
         listener: (context, state) async {
       if (state is AddLecturesLoading) {
         isLoading = true;

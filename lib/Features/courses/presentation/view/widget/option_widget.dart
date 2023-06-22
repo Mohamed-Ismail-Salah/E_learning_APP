@@ -23,12 +23,12 @@ String title;
             context.push(page);
           },
           child: Container(
-            width: 150,
-            height: 150,
+            width:  MediaQuery.of(context).size.width*.2,
+            height: MediaQuery.of(context).size.height*.1,
             decoration: BoxDecoration(
 
 
-              borderRadius: BorderRadius.circular(20), // Set the border radius to half the container width for a circular shape
+              borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.withOpacity(0.5),

@@ -32,7 +32,7 @@ String code;
                 const SizedBox(width: 15,),
                 Column(
                   children: [
-                    Text("QR Code 1",style: Styles.textStyle25,),
+                    Text("QR Code ",style: Styles.textStyle25,),
                     const SizedBox(height: 10,),
                     Row(children:   [
                       const Icon(Icons.access_time)
