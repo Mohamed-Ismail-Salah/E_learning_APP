@@ -35,8 +35,10 @@ class SplashView extends StatelessWidget {
                 String? token = await tokenStorage.getToken();
                 if(token==null){
                   context.pushReplacement(AppRouter.kAccessPremissionsView);
+
                 }else{
-                  context.pushReplacement(AppRouter.kAdminHomeView);
+                  print(token);
+                  context.pushReplacement(AppRouter.kStudentHomeView);
                 }
 
               },

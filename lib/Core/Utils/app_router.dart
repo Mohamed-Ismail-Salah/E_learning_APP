@@ -1,5 +1,6 @@
  import 'package:e_learning/Features/courses/data/models/all_lecture.dart';
 import 'package:e_learning/Features/courses/presentation/view/add_course_view.dart';
+import 'package:e_learning/Features/profile/StudentProfile/presentation/view/Student_edit_profile_viwe.dart';
   import 'package:go_router/go_router.dart';
 import '../../Features/Authentication/AdminAuthentication/presentation/view/accesspremissions_view.dart';
 import '../../Features/Authentication/AdminAuthentication/presentation/view/login_view.dart';
@@ -14,6 +15,7 @@ import '../../Features/QrCode/presentation/view/course_list_view.dart';
 import '../../Features/QrCode/presentation/view/qrcode_list_view.dart';
 import '../../Features/QrCode/presentation/view/qrcode_view.dart';
 import '../../Features/QrCode/presentation/view/student_attendance_view.dart';
+import '../../Features/ReadQrCode/presentaion/view/read_qrcode_view.dart';
 import '../../Features/Splash/Splash_view.dart';
 import '../../Features/courses/presentation/view/add_Attachment_view.dart';
 import '../../Features/courses/presentation/view/add_assignment_view.dart';
@@ -28,9 +30,12 @@ import '../../Features/courses/presentation/view/update_course_view.dart';
 import '../../Features/courses/presentation/view/create_quiz_view.dart';
 import '../../Features/home/AdminHome/presentation/view/admin_home_view.dart';
 import '../../Features/home/StudentHome/presentation/view/student_home_view.dart';
-import '../../Features/profile/data/models/profile_info_model.dart';
-import '../../Features/profile/presentation/view/edit_profile_viwe.dart';
-import '../../Features/profile/presentation/view/profile_view.dart';
+import '../../Features/profile/Adminprofile/data/models/profile_info_model.dart';
+import '../../Features/profile/Adminprofile/presentation/view/Admin_edit_profile_viwe.dart';
+import '../../Features/profile/Adminprofile/presentation/view/Admin_profile_view.dart';
+import '../../Features/profile/StudentProfile/data/models/profile_Student_info_model.dart';
+import '../../Features/profile/StudentProfile/presentation/view/Student_profile_view.dart';
+
 
 abstract class AppRouter {
   static const kAccessPremissionsView = '/AccessPremissionsView';
@@ -62,6 +67,9 @@ abstract class AppRouter {
   static const kCreateQuiz= "/CreateQuiz";
   static const kAllQuizView= "/AllQuizView";
   static const kAddQuestionView="/AddQuestionView";
+  static const  kQRCodeScanner="/QRCodeScanner";
+  static const kStudentEditProfileView="/StudentEditProfileView";
+  static const kStudentProfileView= "/StudentProfileView";
   static final router = GoRouter(
     routes: [
       GoRoute(
@@ -137,11 +145,11 @@ abstract class AppRouter {
       ),
       GoRoute(
         path:kProfileView  ,
-        builder: (context, state) => const ProfileView(),
+        builder: (context, state) => const AdminProfileView(),
       ),
       GoRoute(
         path:kEditProfileView  ,
-        builder: (context, state) =>     EditProfileView(
+        builder: (context, state) =>     AdminEditProfileView(
           profileInfoModel:  state.extra as ProfileInfoModel ,
 
          ),
@@ -197,6 +205,22 @@ abstract class AppRouter {
           num:  int.parse( state.queryParameters ["num"] ??"0") ,
 
         ),
+      ),
+      GoRoute(
+        path:kQRCodeScanner,
+        builder: (context, state) =>     QRCodeScannerView(),
+      ),
+      GoRoute(
+        path:kStudentProfileView,
+        builder: (context, state) =>    const StudentProfileView(),
+      ),
+
+      GoRoute(
+        path:kStudentEditProfileView,
+        builder: (context, state) =>   StudentEditProfileView(profileStudentInfoModel:
+          state.extra as ProfileStudentInfoModel
+
+            ,),
       ),
     ],
   );

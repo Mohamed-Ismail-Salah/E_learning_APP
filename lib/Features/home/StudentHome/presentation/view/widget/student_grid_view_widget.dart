@@ -16,8 +16,8 @@ class StudentGridViewWidget extends StatelessWidget {
       child: GridView.count(
         crossAxisCount: 2,
         children: [
-
-          StudentBuildGridItem(imageUrl:'assets/images/Student Council.png', name:'QR Scanner',page: ""),
+          StudentBuildGridItem(imageUrl:'assets/images/22.png', name:'Profile',page:AppRouter.kStudentProfileView),
+          StudentBuildGridItem(imageUrl:'assets/images/Student Council.png', name:'QR Scanner',page: AppRouter.kQRCodeScanner),
            // add more grid items here
         ],
       ),

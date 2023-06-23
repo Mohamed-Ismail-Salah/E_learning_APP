@@ -8,6 +8,7 @@ import 'package:e_learning/Features/courses/data/repos/get_courses_repos/get_cou
 import 'package:e_learning/Features/courses/data/repos/update_course_repos/update_courses_repo_implemntaion.dart';
 import 'package:e_learning/Features/courses/presentation/view_models/add_courses_cubit/add_courses_cubit.dart';
 import 'package:e_learning/Features/courses/presentation/view_models/get_courses_cubit/getcourses_cubit.dart';
+import 'package:e_learning/Features/profile/StudentProfile/presentation/view_models/get_profile_info_cubit/get_Student_profile_ifo_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'Core/Utils/app_router.dart';
@@ -26,8 +27,9 @@ import 'Features/QrCode/data/repos/get_allQrcode_repos/get_courses_repo_implemnt
 import 'Features/QrCode/presentation/view_models/Qrcode_cubit/qr_code_cubit.dart';
 import 'Features/courses/presentation/view_models/image_picker_cubit/image_picker_cubit.dart';
 import 'Features/courses/presentation/view_models/update_courses_cubit/update_courses_cubit.dart';
- import 'Features/profile/data/get_profile_info/get_profile_info_imp.dart';
-import 'Features/profile/presentation/view_models/get_profile_info_cubit/get_profile_ifo_cubit.dart';
+ import 'Features/profile/Adminprofile/data/get_profile_info/get_Admin_profile_info_imp.dart';
+import 'Features/profile/Adminprofile/presentation/view_models/get_profile_info_cubit/get_Admin_profile_ifo_cubit.dart';
+import 'Features/profile/StudentProfile/data/get_profile_info/get_Student_profile_info_imp.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,7 +50,10 @@ class MyApp extends StatelessWidget {
                 LoginStudentCubit( LoginStudentRepoImp(ApiService(Dio())))),
         BlocProvider(
             create: (context) =>
-                GetProfileIfoCubit(GetProfileIfoImp(ApiService(Dio())))..getProfileInf()),
+                GetAdminProfileIfoCubit(GetAdminProfileIfoImp(ApiService(Dio())))..getProfileInf()),
+        BlocProvider(
+            create: (context) =>
+            GetStudentProfileIfoCubit(GetStudentProfileIfoImp(ApiService(Dio())))..getStudentProfileInf()),
     BlocProvider(
     create:(context) => GetStudentCubit(GetStudentIfImpRepo(ApiService(Dio())))),
         BlocProvider(
