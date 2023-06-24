@@ -32,13 +32,19 @@ class SplashView extends StatelessWidget {
               totalRepeatCount: 1,
               onFinished: () async {
                 final tokenStorage = TokenStorage();
+                final permissionsStorage = PermissionsStorage();
+                String? permissions = await permissionsStorage.getPermissionsKey();
                 String? token = await tokenStorage.getToken();
                 if(token==null){
                   context.pushReplacement(AppRouter.kAccessPremissionsView);
 
                 }else{
-                  print(token);
-                  context.pushReplacement(AppRouter.kStudentHomeView);
+                  if(permissions==AppRouter.kStudentHomeView){
+                    context.pushReplacement(AppRouter.kStudentHomeView);
+                  }else{
+                    context.pushReplacement(AppRouter.kAdminHomeView);
+                  }
+
                 }
 
               },

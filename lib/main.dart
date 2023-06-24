@@ -3,6 +3,7 @@ import 'package:e_learning/Core/Utils/api_service.dart';
 import 'package:e_learning/Core/Utils/app_theme.dart';
 import 'package:e_learning/Features/QrCode/data/repos/addQrCodeRepos/addQrcode_repo_implemntaion.dart';
 import 'package:e_learning/Features/QrCode/presentation/view_models/add_QrCode_cubit/add_qr_code_cubit.dart';
+import 'package:e_learning/Features/StudentCourses/presentation/view_model/get_Student_courses_cubit/getcourses_cubit.dart';
 import 'package:e_learning/Features/courses/data/repos/add_courses_repos/add_courses_repo_implemntaion.dart';
 import 'package:e_learning/Features/courses/data/repos/get_courses_repos/get_courses_repo_implemntaion.dart';
 import 'package:e_learning/Features/courses/data/repos/update_course_repos/update_courses_repo_implemntaion.dart';
@@ -25,6 +26,8 @@ import 'Features/Message/presentation/view_models/get_student_cubit/get_student_
 import 'Features/QrCode/data/repos/get_Student_Attendance/get_Student_attendance_repo_implemntaion.dart';
 import 'Features/QrCode/data/repos/get_allQrcode_repos/get_courses_repo_implemntaion.dart';
 import 'Features/QrCode/presentation/view_models/Qrcode_cubit/qr_code_cubit.dart';
+import 'Features/QrCode/presentation/view_models/location_cubit/location_cubit.dart';
+import 'Features/StudentCourses/data/repos/get_Student_courses_repos/get_Student_courses_imp.dart';
 import 'Features/courses/presentation/view_models/image_picker_cubit/image_picker_cubit.dart';
 import 'Features/courses/presentation/view_models/update_courses_cubit/update_courses_cubit.dart';
  import 'Features/profile/Adminprofile/data/get_profile_info/get_Admin_profile_info_imp.dart';
@@ -42,6 +45,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
+        BlocProvider(
+        create: (context) => LocationCubit(),),
+
         BlocProvider(
             create: (context) =>
                 LoginAdminCubit(LoginAdminRepoImp(ApiService(Dio())))),
@@ -75,6 +81,12 @@ class MyApp extends StatelessWidget {
             create: (context) =>
                 GetCoursesCubit(GetCoursesRepoImp(ApiService(Dio())))
                   ..getAllCourses()),
+
+
+        BlocProvider(
+            create: (context) =>
+            GetStudentCoursesCubit(GetStudentCoursesRepoImp(ApiService(Dio())))
+              ),
         BlocProvider(create: (context) => FilePickerCubit()),
         BlocProvider(
           create: (context) => QrCodeCubit(

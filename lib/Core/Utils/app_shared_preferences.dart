@@ -19,3 +19,22 @@ class TokenStorage {
     prefs.remove(_tokenKey);
   }
 }
+class  PermissionsStorage {
+  static const String _permissionsKey = 'permissions';
+
+  Future<void> savePermissionsKey(String  permissions) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_permissionsKey, permissions);
+  }
+
+  Future<String?> getPermissionsKey() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString(_permissionsKey);
+  }
+
+
+  Future<void> removePermissionsKey() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.remove(_permissionsKey);
+  }
+}

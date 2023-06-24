@@ -17,6 +17,10 @@ import '../../Features/QrCode/presentation/view/qrcode_view.dart';
 import '../../Features/QrCode/presentation/view/student_attendance_view.dart';
 import '../../Features/ReadQrCode/presentaion/view/read_qrcode_view.dart';
 import '../../Features/Splash/Splash_view.dart';
+import '../../Features/StudentCourses/presentation/view/Attachment_course_view.dart';
+import '../../Features/StudentCourses/presentation/view/Student_course_data_view.dart';
+import '../../Features/StudentCourses/presentation/view/Student_courses_view.dart';
+import '../../Features/StudentCourses/presentation/view/all_assignment_view.dart';
 import '../../Features/courses/presentation/view/add_Attachment_view.dart';
 import '../../Features/courses/presentation/view/add_assignment_view.dart';
 import '../../Features/courses/presentation/view/add_question_view.dart';
@@ -70,6 +74,13 @@ abstract class AppRouter {
   static const  kQRCodeScanner="/QRCodeScanner";
   static const kStudentEditProfileView="/StudentEditProfileView";
   static const kStudentProfileView= "/StudentProfileView";
+  static const kStudentCoursesView= "/StudentCoursesView";
+  static const kStudentCourseDataView= "/StudentCourseDataView";
+  static const kToDoHomeView= "/ToDoHomeView";
+  static const kAddTaskView= "/AddTask";
+  static const  kAllAssignmentView ="/AllAssignmentView";
+  static const  kAttachmentCourseView="/AttachmentCourseView";
+
   static final router = GoRouter(
     routes: [
       GoRoute(
@@ -79,6 +90,23 @@ abstract class AppRouter {
       GoRoute(
         path: kAccessPremissionsView,
         builder: (context, state) => const AccessPremissionsView(),
+      ),
+      GoRoute(
+        path: kAttachmentCourseView,
+        builder: (context, state) => const AttachmentCourseView(),
+      ),
+      GoRoute(
+        path: kStudentCourseDataView,
+        builder: (context, state) => const StudentCourseDataView(),
+      ),
+      GoRoute(
+        path: kAllAssignmentView,
+        builder: (context, state) => const  AllAssignmentView(),
+      ),
+
+      GoRoute(
+        path: kStudentCoursesView,
+        builder: (context, state) => const StudentCoursesView(),
       ),
       GoRoute(
         path: kLoginView,

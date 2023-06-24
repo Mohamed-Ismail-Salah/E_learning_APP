@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../../Core/Utils/app_router.dart';
+import '../../../../../../Core/Utils/app_shared_preferences.dart';
 import '../../../../../../Core/Utils/styles.dart';
 
 
@@ -13,8 +14,10 @@ class StudentContainerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
+      onTap: () async{
         context.push(AppRouter.kLoginStudentView);
+        await PermissionsStorage().savePermissionsKey(AppRouter.kStudentHomeView);
+
 
       },
       child: Container(

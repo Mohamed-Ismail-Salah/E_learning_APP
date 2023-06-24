@@ -11,11 +11,9 @@ class AddQrCodeView extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return  BlocProvider(
-        create: (context) => LocationCubit(),
-    child:const Scaffold(
+    return   const Scaffold(
       body: SafeArea(child: AddQrCodeBody()),
-    )
+
     );
   }
 
