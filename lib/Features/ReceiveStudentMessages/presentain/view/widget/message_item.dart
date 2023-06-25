@@ -4,17 +4,17 @@ import 'package:e_learning/Features/courses/data/models/Assignment_modle.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class AssignmentItem extends StatelessWidget {
-    AssignmentItem({
+class MessageItem extends StatelessWidget {
+  MessageItem({
     super.key,
-      required this.assignmentModel
+   //   required this.assignmentModel
   });
-AssignmentModel assignmentModel;
+   //AssignmentModel assignmentModel;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        context.push(AppRouter.kAssignmentDetailsView,extra:assignmentModel );
+        context.push(AppRouter.kMessageDetailsView );
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8),
@@ -34,25 +34,27 @@ AssignmentModel assignmentModel;
           padding: const EdgeInsets.all(16),
           child: Row(
             children: [
-              const Icon(Icons.book, size: 32),
+              const Icon(Icons.message,color: Colors.blueAccent, size: 32),
               const SizedBox(width: 16),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    assignmentModel.title,
-                    style:  Styles.textStyle17.copyWith(fontWeight: FontWeight.w900),
-                  ),
-                  const SizedBox(height: 8),
                   Row(
-                    children:   [
-                      const Icon(Icons.description, size: 16, color: Colors.grey),
+                    children: [
+                      const Icon(Icons.person, size: 16, color: Colors.green),
                       const SizedBox(width: 8),
                       Text(
-                        assignmentModel.desc??"",
-                        style:  Styles.textStyle16
+                       " assignmentModel.title",
+                        style:  Styles.textStyle17.copyWith(fontWeight: FontWeight.w900),
                       ),
+
+
                     ],
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    "assignmentModel.desc??""",
+                    style:  Styles.textStyle16
                   ),
                 ],
               ),

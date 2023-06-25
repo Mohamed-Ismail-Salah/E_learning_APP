@@ -1,4 +1,5 @@
- import 'package:e_learning/Features/courses/data/models/all_lecture.dart';
+ import 'package:e_learning/Features/courses/data/models/Assignment_modle.dart';
+import 'package:e_learning/Features/courses/data/models/all_lecture.dart';
 import 'package:e_learning/Features/courses/presentation/view/add_course_view.dart';
 import 'package:e_learning/Features/profile/StudentProfile/presentation/view/Student_edit_profile_viwe.dart';
   import 'package:go_router/go_router.dart';
@@ -16,11 +17,15 @@ import '../../Features/QrCode/presentation/view/qrcode_list_view.dart';
 import '../../Features/QrCode/presentation/view/qrcode_view.dart';
 import '../../Features/QrCode/presentation/view/student_attendance_view.dart';
 import '../../Features/ReadQrCode/presentaion/view/read_qrcode_view.dart';
+import '../../Features/ReceiveStudentMessages/presentain/view/all_message.dart';
+import '../../Features/ReceiveStudentMessages/presentain/view/message_details.dart';
 import '../../Features/Splash/Splash_view.dart';
 import '../../Features/StudentCourses/presentation/view/Attachment_course_view.dart';
 import '../../Features/StudentCourses/presentation/view/Student_course_data_view.dart';
 import '../../Features/StudentCourses/presentation/view/Student_courses_view.dart';
+import '../../Features/StudentCourses/presentation/view/all_Quiz_view.dart';
 import '../../Features/StudentCourses/presentation/view/all_assignment_view.dart';
+import '../../Features/StudentCourses/presentation/view/assignment_details_view.dart';
 import '../../Features/courses/presentation/view/add_Attachment_view.dart';
 import '../../Features/courses/presentation/view/add_assignment_view.dart';
 import '../../Features/courses/presentation/view/add_question_view.dart';
@@ -80,7 +85,10 @@ abstract class AppRouter {
   static const kAddTaskView= "/AddTask";
   static const  kAllAssignmentView ="/AllAssignmentView";
   static const  kAttachmentCourseView="/AttachmentCourseView";
-
+  static const   kAssignmentDetailsView="/AssignmentDetailsView";
+  static const   kAllMessageView="/AllMessageView";
+  static const   kMessageDetailsView= "/MessageDetailsView";
+  static const   kAllStudentQuizView = "/AllStudentQuizView";
   static final router = GoRouter(
     routes: [
       GoRoute(
@@ -90,10 +98,22 @@ abstract class AppRouter {
       GoRoute(
         path: kAccessPremissionsView,
         builder: (context, state) => const AccessPremissionsView(),
+      ),  GoRoute(
+        path: kAllStudentQuizView,
+        builder: (context, state) => const AllStudentQuizView(),
       ),
       GoRoute(
         path: kAttachmentCourseView,
         builder: (context, state) => const AttachmentCourseView(),
+      ),
+
+      GoRoute(
+        path: kMessageDetailsView,
+        builder: (context, state) => const MessageDetailsView(),
+      ),
+      GoRoute(
+        path: kAllMessageView,
+        builder: (context, state) => const AllMessageView(),
       ),
       GoRoute(
         path: kStudentCourseDataView,
@@ -180,8 +200,15 @@ abstract class AppRouter {
         builder: (context, state) =>     AdminEditProfileView(
           profileInfoModel:  state.extra as ProfileInfoModel ,
 
-         ),
-      ),
+         )),
+
+        GoRoute(
+        path:kAssignmentDetailsView  ,
+        builder: (context, state) =>     AssignmentDetailsView(assignmentModel:  state.extra as AssignmentModel ),
+
+        ),
+
+
       GoRoute(
         path:kSendMessageView  ,
         builder: (context, state) =>   SendMessageView(
@@ -250,6 +277,6 @@ abstract class AppRouter {
 
             ,),
       ),
-    ],
+      ],
   );
 }

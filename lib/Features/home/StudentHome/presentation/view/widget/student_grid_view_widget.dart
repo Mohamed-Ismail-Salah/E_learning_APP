@@ -19,7 +19,8 @@ class StudentGridViewWidget extends StatelessWidget {
           StudentBuildGridItem(imageUrl:'assets/images/22.png', name:'Profile',page:AppRouter.kStudentProfileView),
           StudentBuildGridItem(imageUrl:'assets/images/Student Council.png', name:'QR Scanner',page: AppRouter.kQRCodeScanner),
           StudentBuildGridItem(imageUrl:'assets/images/note 1.png', name:'Courses',page:AppRouter.kStudentCoursesView),
-           StudentBuildGridItem(imageUrl:'assets/images/Student Council (2).png',name: 'Log Out',page:AppRouter.kLoginStudentView),
+          StudentBuildGridItem(imageUrl:'assets/images/Student Council (1).png', name:'Message',page:AppRouter.kAllMessageView),
+          StudentBuildGridItem(imageUrl:'assets/images/Student Council (2).png',name: 'Log Out',page:AppRouter.kLoginStudentView),
 
           // add more grid items here
         ],

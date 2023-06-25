@@ -28,4 +28,6 @@ class QuizModel {
       'quistion': questions.map((question) => question.toJson()).toList(),
     }};
   }
+
+
 }

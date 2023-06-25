@@ -24,7 +24,7 @@ class StudentCourseDataBody extends StatelessWidget{
       ),
       SizedBox(height: MediaQuery.of(context).size.height*.1,),
       StudentOption(img: 'assets/images/quiz.png',
-        page:  "AppRouter.kAllQuizView",
+        page:  AppRouter.kAllStudentQuizView,
         title: 'Quiz',
       ),
     ],

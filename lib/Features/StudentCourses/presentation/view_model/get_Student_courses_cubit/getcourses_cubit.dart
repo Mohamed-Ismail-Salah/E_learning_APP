@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
  import 'package:flutter/material.dart';
 
  import '../../../data/modles/get_Student_all_courses.dart';
-import '../../../data/repos/get_Student_courses_repos/git_Student_courses_repo.dart';
+import '../../../data/repos/get_Student_courses_repos/get_Student_courses_repo.dart';
 
 part 'get_Student_courses_state.dart';
 
