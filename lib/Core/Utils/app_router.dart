@@ -1,4 +1,6 @@
- import 'package:e_learning/Features/courses/data/models/Assignment_modle.dart';
+ import 'package:e_learning/Features/ReceiveStudentMessages/data/model/Messages_Data_modle.dart';
+import 'package:e_learning/Features/StudentCourses/data/modles/Student_quiz_model.dart';
+import 'package:e_learning/Features/courses/data/models/Assignment_modle.dart';
 import 'package:e_learning/Features/courses/data/models/all_lecture.dart';
 import 'package:e_learning/Features/courses/presentation/view/add_course_view.dart';
 import 'package:e_learning/Features/profile/StudentProfile/presentation/view/Student_edit_profile_viwe.dart';
@@ -26,15 +28,17 @@ import '../../Features/StudentCourses/presentation/view/Student_courses_view.dar
 import '../../Features/StudentCourses/presentation/view/all_Quiz_view.dart';
 import '../../Features/StudentCourses/presentation/view/all_assignment_view.dart';
 import '../../Features/StudentCourses/presentation/view/assignment_details_view.dart';
+import '../../Features/StudentCourses/presentation/view/student_Quiz_details.dart';
 import '../../Features/courses/presentation/view/add_Attachment_view.dart';
 import '../../Features/courses/presentation/view/add_assignment_view.dart';
 import '../../Features/courses/presentation/view/add_question_view.dart';
+import '../../Features/courses/presentation/view/all_Admin_Quiz_view.dart';
 import '../../Features/courses/presentation/view/all_Attachment_view.dart';
-import '../../Features/courses/presentation/view/all_quiz_view.dart';
-import '../../Features/courses/presentation/view/course_data_view.dart';
+ import '../../Features/courses/presentation/view/course_data_view.dart';
 import '../../Features/courses/presentation/view/courses_view.dart';
 import '../../Features/courses/presentation/view/create_assignment _view.dart';
 import '../../Features/courses/presentation/view/lecturel_data_view.dart';
+import '../../Features/courses/presentation/view/students_grades.dart';
 import '../../Features/courses/presentation/view/update_course_view.dart';
 import '../../Features/courses/presentation/view/create_quiz_view.dart';
 import '../../Features/home/AdminHome/presentation/view/admin_home_view.dart';
@@ -89,6 +93,9 @@ abstract class AppRouter {
   static const   kAllMessageView="/AllMessageView";
   static const   kMessageDetailsView= "/MessageDetailsView";
   static const   kAllStudentQuizView = "/AllStudentQuizView";
+  static const   kStudentQuizDetails = "/StudentQuizDetails";
+  static const   kAllAdminQuizView="/AllAdminQuizView";
+  static const   kStudentsGradesView=  "/StudentsGradesView";
   static final router = GoRouter(
     routes: [
       GoRoute(
@@ -98,7 +105,16 @@ abstract class AppRouter {
       GoRoute(
         path: kAccessPremissionsView,
         builder: (context, state) => const AccessPremissionsView(),
-      ),  GoRoute(
+      ),
+      GoRoute(
+        path: kStudentsGradesView,
+        builder: (context, state) =>   StudentsGradesView(allQuizModel:  state.extra as AllQuizModel ,) ,
+      ),
+      GoRoute(
+        path: kAllAdminQuizView,
+        builder: (context, state) => const  AllAdminQuizView(),
+      ),
+      GoRoute(
         path: kAllStudentQuizView,
         builder: (context, state) => const AllStudentQuizView(),
       ),
@@ -109,7 +125,13 @@ abstract class AppRouter {
 
       GoRoute(
         path: kMessageDetailsView,
-        builder: (context, state) => const MessageDetailsView(),
+        builder: (context, state) =>   MessageDetailsView(messageDataModel:  state.extra as MessageDataModel,),
+      ),
+      
+
+      GoRoute(
+        path: kStudentQuizDetails,
+        builder: (context, state) =>   StudentQuizDetailsView(allQuizModel:   state.extra as AllQuizModel,),
       ),
       GoRoute(
         path: kAllMessageView,
@@ -247,10 +269,7 @@ abstract class AppRouter {
         path:kCreateQuiz,
         builder: (context, state) =>  const CreateQuizView(),
       ),
-      GoRoute(
-        path:kAllQuizView,
-        builder: (context, state) =>  const AllQuizView(),
-      ),
+
       GoRoute(
         path:kAddQuestionView,
          builder: (context, state) =>    AddQuestionView(

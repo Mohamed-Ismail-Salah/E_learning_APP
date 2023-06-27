@@ -101,20 +101,21 @@ class AddQuestionWidget extends StatelessWidget {
                       option4Controller.clear();
                       option5Controller.clear();
                       correctAnswerController.clear();
-                     }else{
-                      print( questionList.length);
-                      int? id = BlocProvider.of<GetCoursesCubit>(context).getCourseId();
-                       QuizModel quizModel = QuizModel(
-                        name: name,
-                        courseId: id!,
-                        maxDegree: maxDegree,
-                        maxTime: maxTime,
-                        instructor: "body",
-                        questions: questionList ,
-                      );
-                       BlocProvider.of<AddQuizCubit>(context).addQuiz(quizModel);
+                      if(num==questionList.length){
+                        print( questionList.length);
+                        int? id = BlocProvider.of<GetCoursesCubit>(context).getCourseId();
+                        QuizModel quizModel = QuizModel(
+                          name: name,
+                          courseId: id!,
+                          maxDegree: maxDegree,
+                          maxTime: maxTime,
+                          instructor: "body",
+                          questions: questionList ,
+                        );
+                        BlocProvider.of<AddQuizCubit>(context).addQuiz(quizModel);
 
-                    }
+                      }
+                     }
                   }
                 },
 

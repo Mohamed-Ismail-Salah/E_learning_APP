@@ -1,6 +1,7 @@
  import 'package:e_learning/Core/Utils/app_router.dart';
 import 'package:flutter/material.dart';
 
+
 import 'option_widget.dart';
 
 class CourseDataBody extends StatelessWidget{
@@ -23,7 +24,7 @@ class CourseDataBody extends StatelessWidget{
       ),
       SizedBox(height: MediaQuery.of(context).size.height*.1,),
       Option(img: 'assets/images/quiz.png',
-        page:  AppRouter.kAllQuizView,
+        page:  AppRouter.kAllAdminQuizView,
         title: 'Add Quiz',
       ),
     ],

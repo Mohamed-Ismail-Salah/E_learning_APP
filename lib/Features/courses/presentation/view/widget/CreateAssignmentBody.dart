@@ -21,7 +21,7 @@ class CreateAssignmentBody extends StatelessWidget{
         isLoading = false;
 
          context.pop(AppRouter.kCreateAssignment);
-        showSnackBar(context, "Message sent successfully");
+        showSnackBar(context, " sent successfully");
       } else if (state is AddAssignmentFailure) {
         isLoading = false;
         showSnackBar(context, state.errMessage);

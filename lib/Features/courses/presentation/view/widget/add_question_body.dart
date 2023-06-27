@@ -27,7 +27,7 @@ int   maxTime;
           isLoading = true;
         } else if (state is AddQuizSuccess) {
           isLoading = false;
-context.pushReplacement(AppRouter.kAllQuizView);
+context.pushReplacement(AppRouter.kAllAdminQuizView);
           showSnackBar(context, "Message sent successfully");
         } else if (state is AddQuizFailure) {
           isLoading = false;

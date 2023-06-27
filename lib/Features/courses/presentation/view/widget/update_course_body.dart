@@ -1,14 +1,12 @@
 import 'package:e_learning/Core/Utils/styles.dart';
-import 'package:e_learning/Features/courses/presentation/view_models/add_courses_cubit/add_courses_cubit.dart';
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../../../../../Core/Utils/app_router.dart';
 import '../../../../../Core/widgets/Show_Snackbar.dart';
 import '../../view_models/update_courses_cubit/update_courses_cubit.dart';
-import 'inpout_add_course.dart';
-import 'inpout_update_course.dart';
+ import 'inpout_update_course.dart';
 
 class  UpdateCourseBody extends StatelessWidget{
   const UpdateCourseBody({super.key});

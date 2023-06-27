@@ -1,22 +1,21 @@
-import 'package:e_learning/Core/Utils/app_router.dart';
-import 'package:e_learning/Core/Utils/styles.dart';
-import 'package:e_learning/Features/courses/data/models/Assignment_modle.dart';
-import 'package:flutter/material.dart';
+ import 'package:e_learning/Core/Utils/styles.dart';
+ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../data/model/Messages_Data_modle.dart';
+ import '../../../../../Core/Utils/app_router.dart';
+import '../../../../StudentCourses/data/modles/Student_quiz_model.dart';
 
-class MessageItem extends StatelessWidget {
-  MessageItem({
+class AdminQuizItem extends StatelessWidget {
+  AdminQuizItem({
     super.key,
-      required this.messageDataModel
+    required this.allQuizModel
   });
-   MessageDataModel  messageDataModel;
+  AllQuizModel allQuizModel;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        context.push(AppRouter.kMessageDetailsView,extra:messageDataModel  );
+         context.push(AppRouter.kStudentsGradesView,extra:allQuizModel);
       },
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 8),
@@ -36,27 +35,25 @@ class MessageItem extends StatelessWidget {
           padding: const EdgeInsets.all(16),
           child: Row(
             children: [
-              const Icon(Icons.message,color: Colors.blueAccent, size: 32),
+              const Icon(Icons.task, size: 32),
               const SizedBox(width: 16),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(
-                    children: [
-                      const Icon(Icons.person, size: 16, color: Colors.green),
-                      const SizedBox(width: 8),
-                      Text(
-                        messageDataModel.fatherEmail,
-                        style:  Styles.textStyle17.copyWith(fontWeight: FontWeight.w900),
-                      ),
-
-
-                    ],
+                  Text(
+                    allQuizModel.name,
+                    style:  Styles.textStyle17.copyWith(fontWeight: FontWeight.w900),
                   ),
                   const SizedBox(height: 8),
-                  Text(
-                      messageDataModel.message,
-                    style:  Styles.textStyle16
+                  Row(
+                    children:   [
+                      const Icon(Icons.timer_sharp, size: 16, color: Colors.grey),
+                      const SizedBox(width: 8),
+                      Text(
+                          allQuizModel.createdAt.substring(0,10) ,
+                          style:  Styles.textStyle16
+                      ),
+                    ],
                   ),
                 ],
               ),
