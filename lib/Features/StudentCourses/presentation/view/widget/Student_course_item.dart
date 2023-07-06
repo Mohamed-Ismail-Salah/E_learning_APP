@@ -16,7 +16,6 @@ String courseName;
  String code;
   @override
   Widget build(BuildContext context) {
-
     return  GestureDetector(
       onTap: (){
         BlocProvider.of<GetStudentCoursesCubit>(context).setStudentCourseId(id);

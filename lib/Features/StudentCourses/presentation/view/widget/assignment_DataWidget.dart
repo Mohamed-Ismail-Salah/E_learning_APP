@@ -57,8 +57,10 @@ class AssignmentDataWidget extends StatelessWidget {
                  GestureDetector(
                    onTap: () async {
                      try {
-                       String url= "https://what-a-sito.000webhostapp.com/lectures_files/${file}";
+                       print(file);
+                       String url= "https://what-a-sito.000webhostapp.com/lectures_assignments_files/${file}";
                        final Uri link = Uri.parse(url);
+                       print(url);
                        if (!await launchUrl(link)) {
                      throw Exception('Could not launch $link');
                      }
@@ -70,10 +72,15 @@ class AssignmentDataWidget extends StatelessWidget {
                    },
                   child: Text(
                     file!,
+
                     style: const TextStyle(
+
                       fontSize: 16.0,
+
                       color: Colors.blueAccent,
                     ),
+                    overflow: TextOverflow.ellipsis,
+
                   ),
                 ),
               ],

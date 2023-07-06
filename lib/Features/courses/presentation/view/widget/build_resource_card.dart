@@ -22,9 +22,12 @@ class BuildResourceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+
+
       onTap: () async {
       try {
         final Uri link = Uri.parse(url);
+print(url);
         if (!await launchUrl(link)) {
           throw Exception('Could not launch $link');
         }

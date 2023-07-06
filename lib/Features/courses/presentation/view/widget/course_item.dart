@@ -66,15 +66,7 @@ context.push(AppRouter.kCourseDataView);
                       size: 30,
                     ),
                   ),
-                  const Spacer(),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(
-                      Icons.delete,
-                      color: Colors.red,
-                      size: 30,
-                    ),
-                  )
+
                 ],
               ),
             ],

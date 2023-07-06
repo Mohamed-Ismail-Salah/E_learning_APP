@@ -1,6 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:e_learning/Core/Utils/api_service.dart';
 import 'package:e_learning/Core/Utils/app_theme.dart';
+import 'package:e_learning/Features/Authentication/FatherAuthentication/presentation/view_models/login_cubit/login_Father_cubit.dart';
+import 'package:e_learning/Features/Authentication/FatherAuthentication/presentation/view_models/signup_cubit/sign_up_Father_cubit.dart';
 import 'package:e_learning/Features/QrCode/data/repos/addQrCodeRepos/addQrcode_repo_implemntaion.dart';
 import 'package:e_learning/Features/QrCode/presentation/view_models/add_QrCode_cubit/add_qr_code_cubit.dart';
 import 'package:e_learning/Features/StudentCourses/presentation/view_model/get_Student_courses_cubit/getcourses_cubit.dart';
@@ -17,6 +19,8 @@ import 'Features/Authentication/AdminAuthentication/data/repos/loginRepos/login_
 import 'Features/Authentication/AdminAuthentication/data/repos/signupRepos/signup_admin_repo_implemntaion.dart';
 import 'Features/Authentication/AdminAuthentication/presentation/view_models/login_cubit/login_admin_cubit.dart';
 import 'Features/Authentication/AdminAuthentication/presentation/view_models/signup_cubit/sign_up_admin_cubit.dart';
+import 'Features/Authentication/FatherAuthentication/data/repos/loginRepos/login_father_repo_implemntaion.dart';
+import 'Features/Authentication/FatherAuthentication/data/repos/signupRepos/signup_father_repo_implemntaion.dart';
 import 'Features/Authentication/studentsAuthentication/data/repos/loginRepos/login_student_repo_implemntaion.dart';
 import 'Features/Authentication/studentsAuthentication/data/repos/signupRepos/signup_student_repo_implemntaion.dart';
 import 'Features/Authentication/studentsAuthentication/presentation/view_models/login_cubit/login_Student_cubit.dart';
@@ -30,7 +34,7 @@ import 'Features/QrCode/presentation/view_models/location_cubit/location_cubit.d
 import 'Features/StudentCourses/data/repos/get_Student_courses_repos/get_Student_courses_imp.dart';
 import 'Features/courses/presentation/view_models/image_picker_cubit/image_picker_cubit.dart';
 import 'Features/courses/presentation/view_models/update_courses_cubit/update_courses_cubit.dart';
- import 'Features/profile/Adminprofile/data/get_profile_info/get_Admin_profile_info_imp.dart';
+import 'Features/profile/Adminprofile/data/get_profile_info/get_Admin_profile_info_imp.dart';
 import 'Features/profile/Adminprofile/presentation/view_models/get_profile_info_cubit/get_Admin_profile_ifo_cubit.dart';
 import 'Features/profile/StudentProfile/data/get_profile_info/get_Student_profile_info_imp.dart';
 
@@ -46,28 +50,37 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-        create: (context) => LocationCubit(),),
-
+          create: (context) => LocationCubit(),
+        ),
         BlocProvider(
             create: (context) =>
                 LoginAdminCubit(LoginAdminRepoImp(ApiService(Dio())))),
         BlocProvider(
             create: (context) =>
-                LoginStudentCubit( LoginStudentRepoImp(ApiService(Dio())))),
+                LoginStudentCubit(LoginStudentRepoImp(ApiService(Dio())))),
         BlocProvider(
             create: (context) =>
-                GetAdminProfileIfoCubit(GetAdminProfileIfoImp(ApiService(Dio())))..getProfileInf()),
+                LoginFatherCubit(LoginFatherRepoImp(ApiService(Dio())))),
+        BlocProvider(
+            create: (context) => GetAdminProfileIfoCubit(
+                GetAdminProfileIfoImp(ApiService(Dio())))
+              ..getProfileInf()),
+        BlocProvider(
+            create: (context) => GetStudentProfileIfoCubit(
+                GetStudentProfileIfoImp(ApiService(Dio())))
+              ..getStudentProfileInf()),
         BlocProvider(
             create: (context) =>
-            GetStudentProfileIfoCubit(GetStudentProfileIfoImp(ApiService(Dio())))..getStudentProfileInf()),
-    BlocProvider(
-    create:(context) => GetStudentCubit(GetStudentIfImpRepo(ApiService(Dio())))),
+                GetStudentCubit(GetStudentIfImpRepo(ApiService(Dio())))),
         BlocProvider(
             create: (context) =>
                 SignUpAdminCubit(SignUpAdminRepoImp(ApiService(Dio())))),
         BlocProvider(
             create: (context) =>
                 SignUpStudentCubit(SignUpStudentRepoImp(ApiService(Dio())))),
+        BlocProvider(
+            create: (context) =>
+                SignUpFatherCubit(SignUpFatherRepoImp(ApiService(Dio())))),
         BlocProvider(
             create: (context) =>
                 AddCoursesCubit(AddCoursesRepoImp(ApiService(Dio())))),
@@ -81,12 +94,9 @@ class MyApp extends StatelessWidget {
             create: (context) =>
                 GetCoursesCubit(GetCoursesRepoImp(ApiService(Dio())))
                   ..getAllCourses()),
-
-
         BlocProvider(
-            create: (context) =>
-            GetStudentCoursesCubit(GetStudentCoursesRepoImp(ApiService(Dio())))
-              ),
+            create: (context) => GetStudentCoursesCubit(
+                GetStudentCoursesRepoImp(ApiService(Dio())))),
         BlocProvider(create: (context) => FilePickerCubit()),
         BlocProvider(
           create: (context) => QrCodeCubit(

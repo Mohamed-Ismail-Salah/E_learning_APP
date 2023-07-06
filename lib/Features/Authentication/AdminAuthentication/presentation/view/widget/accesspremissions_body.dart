@@ -1,4 +1,5 @@
 import 'package:e_learning/Core/Utils/styles.dart';
+import 'package:e_learning/Features/Authentication/AdminAuthentication/presentation/view/widget/father_container_widget.dart';
 import 'package:e_learning/Features/Authentication/AdminAuthentication/presentation/view/widget/student_container_widget.dart';
  import 'package:flutter/material.dart';
 
@@ -16,7 +17,9 @@ class AccessPremissionsBody extends StatelessWidget {
         const SizedBox(height: 40,),
         const StudentContainerWidget(),
          const SizedBox(height: 40,),
-         const AdminContainerWidget()
+         const AdminContainerWidget(),
+        const SizedBox(height: 40,),
+        const FatherContainerWidget()
 
       ],
     );

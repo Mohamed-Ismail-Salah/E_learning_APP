@@ -17,7 +17,7 @@ class AddAppBarQrCode extends StatelessWidget {
       child: Row(
         children: [
           Text(
-            "QR Scanner",
+            "QR  Generator",
             style: Styles.textStyle25,
           ),
           const Spacer(),

@@ -15,7 +15,7 @@ class QrCodeListBody extends StatelessWidget{
         const AddAppBarQrCode(),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 20),
-          child: Text('Select which QR code You Want:',style:Styles.textStyle25,),
+          child: Text('Select which QR code You Want:',style:Styles.textStyle17,),
         ),
 
           const QrcodeListView()

@@ -22,7 +22,7 @@ class QrCodeViewBody extends StatelessWidget{
            const Spacer(),
            CustomButton(
              onTap: () {
-               context.pushReplacement(AppRouter.kListQrCodeView);
+               context.pushReplacement(AppRouter.kAdminHomeView);
              },name: "Finish",),
          ],
        ),

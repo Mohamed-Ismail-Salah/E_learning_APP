@@ -41,7 +41,10 @@ class SplashView extends StatelessWidget {
                 }else{
                   if(permissions==AppRouter.kStudentHomeView){
                     context.pushReplacement(AppRouter.kStudentHomeView);
-                  }else{
+                  }else if(permissions==AppRouter.kFatherHomeView){
+                    context.pushReplacement(AppRouter.kFatherHomeView);
+                  }
+                  else{
                     context.pushReplacement(AppRouter.kAdminHomeView);
                   }
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
  import '../../../../../../Core/Utils/styles.dart';
-import 'admin_grid_view_widget.dart';
+import 'student_grid_view_widget.dart';
 
-class AdminHomeBody extends StatelessWidget{
-  const AdminHomeBody({Key? key}) : super(key: key);
+class FatherHomeBody extends StatelessWidget{
+  const FatherHomeBody({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,16 +15,15 @@ class AdminHomeBody extends StatelessWidget{
           Padding(
             padding: const EdgeInsets.all(10),
             child: Row(
-
               children: [
                 Image.asset("assets/images/Student Council (111).png"),
-              SizedBox(width: MediaQuery.of(context).size.width*.15,),
-                 Text( "Admin Home",style:Styles.textStyle25,),
+SizedBox(width: MediaQuery.of(context).size.width*.3,),
+                 Text( "Father Home",style:Styles.textStyle25,),
               ],
             ),
           ),
           const SizedBox(height: 10,),
-          const AdminGridViewWidget(),
+          const FatherGridViewWidget(),
         ],
       )),
   ] );

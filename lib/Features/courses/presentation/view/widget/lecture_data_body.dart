@@ -32,11 +32,13 @@ class LectureDataBody extends StatelessWidget{
                      subtitle: lectureModel.title,
                      url:lectureModel.link??""  ),
                 const SizedBox(height: 16),
+
                 BuildResourceCard(
                     icon: Icons.picture_as_pdf, color: Colors.red,
                     title: 'PDF Materials',
                     subtitle: lectureModel.title, url:"https://what-a-sito.000webhostapp.com/lectures_files/${lectureModel.file}"??"" ),
               ],
+
             ),
           ),
         ],

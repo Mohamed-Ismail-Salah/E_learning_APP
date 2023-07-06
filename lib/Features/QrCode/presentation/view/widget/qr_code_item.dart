@@ -41,7 +41,7 @@ String code;
                   ],
                 ),
                 const Spacer()
-                ,IconButton(onPressed:  (){}, icon:  const Icon(Icons.delete,color: Colors.red,size: 40,))
+
               ],
             ),
           ),

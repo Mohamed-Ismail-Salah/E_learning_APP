@@ -46,7 +46,7 @@ class AllMessageBody extends StatelessWidget {
                         const SizedBox(height: 20),
                         const Center(
                           child: Text(
-                            "NO assignments.",
+                            "NO  Message.",
                             style: TextStyle(fontSize: 16),
                           ),
                         ),

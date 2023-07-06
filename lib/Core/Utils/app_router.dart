@@ -1,13 +1,16 @@
- import 'package:e_learning/Features/ReceiveStudentMessages/data/model/Messages_Data_modle.dart';
+ import 'package:e_learning/Features/Authentication/FatherAuthentication/presentation/view/signup_Father_view.dart';
+import 'package:e_learning/Features/ReceiveStudentMessages/data/model/Messages_Data_modle.dart';
 import 'package:e_learning/Features/StudentCourses/data/modles/Student_quiz_model.dart';
 import 'package:e_learning/Features/courses/data/models/Assignment_modle.dart';
 import 'package:e_learning/Features/courses/data/models/all_lecture.dart';
 import 'package:e_learning/Features/courses/presentation/view/add_course_view.dart';
+import 'package:e_learning/Features/home/FatherHome/presentation/view/Father_home_view.dart';
 import 'package:e_learning/Features/profile/StudentProfile/presentation/view/Student_edit_profile_viwe.dart';
   import 'package:go_router/go_router.dart';
 import '../../Features/Authentication/AdminAuthentication/presentation/view/accesspremissions_view.dart';
 import '../../Features/Authentication/AdminAuthentication/presentation/view/login_view.dart';
 import '../../Features/Authentication/AdminAuthentication/presentation/view/signup_view.dart';
+import '../../Features/Authentication/FatherAuthentication/presentation/view/login_Father_view.dart';
 import '../../Features/Authentication/studentsAuthentication/presentation/view/login_Student_view.dart';
 import '../../Features/Authentication/studentsAuthentication/presentation/view/signup_Student_view.dart';
 import '../../Features/Message/presentation/view/search_student_view.dart';
@@ -54,10 +57,13 @@ abstract class AppRouter {
   static const kAccessPremissionsView = '/AccessPremissionsView';
   static const kLoginView = '/LoginView';
   static const kLoginStudentView = '/LoginStudentView';
+  static const kLoginFatherView = '/LoginFatherView';
   static const kStudentHomeView= '/StudentHomeView';
+  static const kFatherHomeView= '/FatherHomeView';
   static const kAdminHomeView = '/HomeView';
   static const kSignupView = '/SignupView';
   static const kSignupStudentView="/SignupStudentView";
+  static const kSignupFatherView="/SignupFatherView";
   static const kCoursesView = '/CoursesView';
   static const kAddCourseView = '/AddCourseView';
   static const kListCourseQrCodeView="/ListCourseQrCodeView";
@@ -85,7 +91,7 @@ abstract class AppRouter {
   static const kStudentProfileView= "/StudentProfileView";
   static const kStudentCoursesView= "/StudentCoursesView";
   static const kStudentCourseDataView= "/StudentCourseDataView";
-  static const kToDoHomeView= "/ToDoHomeView";
+
   static const kAddTaskView= "/AddTask";
   static const  kAllAssignmentView ="/AllAssignmentView";
   static const  kAttachmentCourseView="/AttachmentCourseView";
@@ -159,6 +165,10 @@ abstract class AppRouter {
         builder: (context, state) => const LoginStudentView(),
       ),
       GoRoute(
+        path: kLoginFatherView,
+        builder: (context, state) => const LoginFatherView(),
+      ),
+      GoRoute(
         path: kSignupView,
         builder: (context, state) => const SignupView(),
       ),
@@ -166,10 +176,17 @@ abstract class AppRouter {
         path: kSignupStudentView,
         builder: (context, state) => const  SignupStudentView(),
       ),
-
+      GoRoute(
+        path: kSignupFatherView,
+        builder: (context, state) => const  SignupFatherView(),
+      ),
       GoRoute(
         path:  kStudentHomeView,
         builder: (context, state) => const StudentHomeView(),
+      ),
+      GoRoute(
+        path: kFatherHomeView ,
+        builder: (context, state) => const FatherHomeView(),
       ),
       GoRoute(
         path:  kAdminHomeView,
