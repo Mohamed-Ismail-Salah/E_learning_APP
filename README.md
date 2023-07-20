@@ -20,6 +20,10 @@ Welcome to E_learning_APP, a revolutionary mobile application that transforms th
 4. Messaging: Doctors can send messages to students or parents directly through the application.
 5. QR Code Attendance: Generate unique QR codes for each lecture within a designated time frame, allowing students to mark their attendance.
 6. Personal Profile: Each doctor has a dedicated page displaying personal information that can be updated.
+![3694c816-8de5-4afd-9d78-8e24444ee0fc](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/7ee9cb3c-ef4a-4e86-8070-dbfdb4c42775)
+![2805f4b1-2b7c-4499-883c-32a85d093a9b](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/85a7364b-3278-4684-8458-883c80a9ef08)
+![b4bc36a2-7d25-419b-b2e2-134156a6c022](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/c912a618-1eaf-4497-acf5-918d62fc793c)
+![d1390ca2-861c-4340-bc2f-f2aafa127da7](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/55b561f2-d8e9-43b3-9a29-0880ecb5ec85)
 
 ### For Students
 
@@ -42,6 +46,7 @@ Welcome to E_learning_APP, a revolutionary mobile application that transforms th
 ![45faa5a7-0263-4ac7-b1bc-020ce42cc102](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/1b0ae3f0-189d-4e55-acb2-99d9ff600552)
 ![aaf6e876-0764-4747-8272-f41a91e5e4f4](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/a3fdb156-b214-433b-b4b0-5b252dd45eb5)
 ![e7d27be7-4cb4-4ca6-973b-19beac9ba3dc](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/1ef1b17e-e6f2-470e-b12e-ab0620e60841)
+![68518248-78c9-4ba9-bb3c-cdf647c07874](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/728dbf11-a0cf-4327-ba93-d6d29328322c)
 
 ### For Parents
 
