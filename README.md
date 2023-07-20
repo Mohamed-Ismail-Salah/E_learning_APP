@@ -4,7 +4,7 @@
 
 Welcome to E_learning_APP, a revolutionary mobile application that transforms the way university doctors, students, and parents engage within the educational ecosystem. Our app offers seamless communication, efficient resource management, and an enhanced learning experience for all users. Empowering doctors to upload materials, set tasks and exams, and communicate directly with students and parents. Students can access course materials, complete tasks, take exams, and receive direct messages, while parents can stay updated on their child's progress. Join us in creating a dynamic educational community, where learning is efficient, interactive, and enjoyable for all. Let's embark on this educational journey together!
 
-| Onboarding screen | User type screen | Login screen | Sin up Screen|
+| Onboarding screen | User type screen | Login screen | Sign up Screen|
 |:--------------------:|:--------------------:|:--------------------:|:--------------------:|
 | ![877e1cb0-6d04-4e5d-8b9d-6390f7aa9c3f](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/bedf37cd-bb12-432b-83ce-d9b9888142ea) | ![14f7af69-e070-4d4b-bcb7-2642399f02f5](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/de867cd0-0c5c-4f3a-85a6-6ecbd8c00576) | ![8b1cf0ef-f1da-423e-89fb-5d90e82a2a97](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/0cc9e31d-b050-49b6-80df-478accca00f2) | ![e39d2b10-36a3-40bb-aa74-f040a170d2e7](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/b141f1c6-62c0-407e-9377-7319b33cae80) |
 
