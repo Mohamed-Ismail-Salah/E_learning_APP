@@ -1,10 +1,10 @@
-#E_learning_APP
+##E_learning_APP
 
  
 
 ## Introduction
 
-Welcome to [E_learning_APP], a revolutionary mobile application that transforms the way university doctors, students, and parents engage within the educational ecosystem. Our app offers seamless communication, efficient resource management, and an enhanced learning experience for all users. Empowering doctors to upload materials, set tasks and exams, and communicate directly with students and parents. Students can access course materials, complete tasks, take exams, and receive direct messages, while parents can stay updated on their child's progress. Join us in creating a dynamic educational community, where learning is efficient, interactive, and enjoyable for all. Let's embark on this educational journey together!
+Welcome to E_learning_APP, a revolutionary mobile application that transforms the way university doctors, students, and parents engage within the educational ecosystem. Our app offers seamless communication, efficient resource management, and an enhanced learning experience for all users. Empowering doctors to upload materials, set tasks and exams, and communicate directly with students and parents. Students can access course materials, complete tasks, take exams, and receive direct messages, while parents can stay updated on their child's progress. Join us in creating a dynamic educational community, where learning is efficient, interactive, and enjoyable for all. Let's embark on this educational journey together!
 
 ## Features
 
