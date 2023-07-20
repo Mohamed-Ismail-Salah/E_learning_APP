@@ -4,20 +4,7 @@
 
 ![App Screenshots](/path/to/app-screenshots.png)  <!-- You can include screenshots of the app here -->
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-  - [For University Doctor](#for-university-doctor)
-  - [For Students](#for-students)
-  - [For Parents](#for-parents)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Tests](#tests)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
-- [Contact](#contact)
+ 
 
 ## Introduction
 
@@ -48,36 +35,17 @@
 1. Receive Notifications: Parents receive messages from doctors for monitoring their child's academic progress.
 2. Personal Profile: Each parent has a dedicated page displaying personal information and can modify it.
 
-## Installation
-
-[Provide step-by-step instructions to install the mobile application. Include links to download the app from app stores if available.]
-
-## Usage
-
-[Explain how to use the mobile application from each user's perspective (doctor, student, parent). Provide examples, code snippets, or screenshots to showcase different app functionalities.]
-
-## Contributing
-
-[Encourage others to contribute to the project and explain how they can do so. Include guidelines for reporting issues, suggesting improvements, and submitting pull requests.]
-
-## Tests
-
-[If applicable, describe how to run tests for the mobile application and provide information about the test suite.]
-
-## License
-
-[Specify the license under which the mobile application is distributed. Include a link to the full license text.]
-
-## Acknowledgements
-
-[Acknowledge any individuals, organizations, or resources that have contributed to the development of the mobile application.]
-
-## Contact
-
-[Provide contact information for questions or inquiries related to the mobile application.]
-
----
-
-[Optional: Include any badges or additional information you want to showcase at the end of the README. For example, app version, development status, or awards.]
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
