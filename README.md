@@ -1,16 +1,17 @@
 # Project Name
 
-[Project Name] is a [brief description of the project's purpose and goals]. It aims to [mention the main objectives and benefits it provides]. 
+[Project Name] is a mobile application that serves as a comprehensive platform for three main user roles: the university doctor, the student, and the parent. It facilitates seamless communication and interaction between these stakeholders, enhancing the overall educational experience.
 
-![Project Demo](/path/to/demo.gif)  <!-- You can include a screenshot, demo GIF, or any visual representation of your project here -->
+![App Screenshots](/path/to/app-screenshots.png)  <!-- You can include screenshots of the app here -->
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
+  - [For University Doctor](#for-university-doctor)
+  - [For Students](#for-students)
+  - [For Parents](#for-parents)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Tests](#tests)
@@ -20,62 +21,63 @@
 
 ## Introduction
 
-[Provide a detailed introduction to the project. Mention its purpose, the problem it aims to solve, and the target audience it serves. You can also describe the project's background and any other relevant context.]
+[Provide a detailed introduction to the mobile application. Mention its purpose, target audience, and how it addresses the needs of doctors, students, and parents.]
 
 ## Features
 
-[List all the key features of the project, highlighting what makes it unique and beneficial. Use bullet points or checkboxes to make it easy to read.]
+### For University Doctor
 
-- [Feature 1]
-- [Feature 2]
-- [Feature 3]
-- ...
+1. Upload Materials: University doctors can easily upload course materials, specifying the semester and academic year.
+2. Assign Tasks: Doctors have the option to assign tasks and assignments to students, which they can solve and submit.
+3. Conduct Exams: Doctors can create and manage exams for students, viewing who attended and their respective grades.
+4. Messaging: Doctors can send messages to students or parents directly through the application.
+5. QR Code Attendance: Generate unique QR codes for each lecture within a designated time frame, allowing students to mark their attendance.
+6. Personal Profile: Each doctor has a dedicated page displaying personal information that can be updated.
 
-## Getting Started
+### For Students
 
-### Prerequisites
+1. Access Materials: Students can view and download course materials uploaded by the doctors.
+2. Complete Tasks: Students can view and download the assignments and tasks set by doctors.
+3. Take Exams: Students can participate in exams set by doctors and receive their grades.
+4. QR Code Attendance: Students can scan the QR codes created by doctors during lectures to register their attendance (within a 10-meter distance from the doctor's location).
+5. Receive Messages: Students receive messages from doctors directly through the application.
+6. Personal Profile: Each student has a personal page displaying their information, which can be edited.
 
-[List any dependencies or prerequisites required to run the project. Include links to installation guides or relevant documentation for each prerequisite.]
+### For Parents
 
-- [Dependency 1](https://example.com)
-- [Dependency 2](https://example.com)
-- ...
+1. Receive Notifications: Parents receive messages from doctors for monitoring their child's academic progress.
+2. Personal Profile: Each parent has a dedicated page displaying personal information and can modify it.
 
-### Installation
+## Installation
 
-[Provide step-by-step instructions to install the project on a local machine. Include code snippets and commands when necessary.]
-
-1. [Step 1]
-2. [Step 2]
-3. [Step 3]
-4. ...
+[Provide step-by-step instructions to install the mobile application. Include links to download the app from app stores if available.]
 
 ## Usage
 
-[Explain how to use the project. Provide examples, code snippets, or screenshots to showcase different use cases. If your project has a UI, describe its functionalities.]
-
-![Usage Example](/path/to/example.png) <!-- Include an image to demonstrate usage -->
+[Explain how to use the mobile application from each user's perspective (doctor, student, parent). Provide examples, code snippets, or screenshots to showcase different app functionalities.]
 
 ## Contributing
 
-[Encourage others to contribute to the project and explain how they can do so. Include guidelines for submitting issues, suggesting improvements, and creating pull requests.]
+[Encourage others to contribute to the project and explain how they can do so. Include guidelines for reporting issues, suggesting improvements, and submitting pull requests.]
 
 ## Tests
 
-[If applicable, describe how to run tests for the project and provide information about the test suite.]
+[If applicable, describe how to run tests for the mobile application and provide information about the test suite.]
 
 ## License
 
-[Specify the license under which the project is distributed. Include a link to the full license text. For example, you can use MIT, Apache, GNU, etc.]
+[Specify the license under which the mobile application is distributed. Include a link to the full license text.]
 
 ## Acknowledgements
 
-[Acknowledge any individuals, organizations, or resources that have contributed to the project or inspired its development.]
+[Acknowledge any individuals, organizations, or resources that have contributed to the development of the mobile application.]
 
 ## Contact
 
-[Provide contact information for questions or inquiries about the project. It can be an email address, a link to your personal website, or any other preferred method of contact.]
+[Provide contact information for questions or inquiries related to the mobile application.]
 
 ---
 
-[Optional: Include any badges or additional information you want to showcase at the end of the README. For example, build status, version number, or awards.]
+[Optional: Include any badges or additional information you want to showcase at the end of the README. For example, app version, development status, or awards.]
+
+
