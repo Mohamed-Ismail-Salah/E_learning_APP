@@ -1,4 +1,4 @@
- ## E_learning_APP
+## E_learning_APP
 
 Welcome to E_learning_APP, a revolutionary mobile application that transforms the way university doctors, students, and parents engage within the educational ecosystem. Our app offers seamless communication, efficient resource management, and an enhanced learning experience for all users. Empowering doctors to upload materials, set tasks and exams, and communicate directly with students and parents. Students can access course materials, complete tasks, take exams, and receive direct messages, while parents can stay updated on their child's progress. Join us in creating a dynamic educational community, where learning is efficient, interactive, and enjoyable for all. Let's embark on this educational journey together!
 
@@ -29,3 +29,12 @@ Welcome to E_learning_APP, a revolutionary mobile application that transforms th
 | Image 1 | Image 2 | Image 3 |
 |---------|---------|---------|
 | ![Image 1](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/34cc5f5a-9eea-4631-8983-f8f6693c0e09) | ![Image 2](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/5656fb2d-8bf8-4929-a02d-c8314fe97a64) | ![Image 3](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/cda96803-917f-4913-9df0-21fc6ac1c01d) |
+
+#### For Parents
+
+1. Receive Notifications: Parents receive messages from doctors for monitoring their child's academic progress.
+2. Personal Profile: Each parent has a dedicated page displaying personal information and can modify it.
+
+| Image 1 | Image 2 | Image 3 |
+|---------|---------|---------|
+| ![Image 1](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/1ef1b17e-e6f2-470e-b12e-ab0620e60841) | ![Image 2](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/728dbf11-a0cf-4327-ba93-d6d29328322c) | ![Image 3](https://github.com/Mohamed-Ismail-Salah/e_learning/assets/109285951/a3fdb156-b214-433b-b4b0-5b252dd45eb5) |
