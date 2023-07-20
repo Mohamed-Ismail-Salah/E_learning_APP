@@ -1,14 +1,10 @@
-# Project Name
-
-[Project Name] is a mobile application that serves as a comprehensive platform for three main user roles: the university doctor, the student, and the parent. It facilitates seamless communication and interaction between these stakeholders, enhancing the overall educational experience.
-
-![App Screenshots](/path/to/app-screenshots.png)  <!-- You can include screenshots of the app here -->
+# E_learning_APP
 
  
 
 ## Introduction
 
-Welcome to [Project Name], a revolutionary mobile application that transforms the way university doctors, students, and parents engage within the educational ecosystem. Our app offers seamless communication, efficient resource management, and an enhanced learning experience for all users. Empowering doctors to upload materials, set tasks and exams, and communicate directly with students and parents. Students can access course materials, complete tasks, take exams, and receive direct messages, while parents can stay updated on their child's progress. Join us in creating a dynamic educational community, where learning is efficient, interactive, and enjoyable for all. Let's embark on this educational journey together!
+Welcome to [E_learning_APP], a revolutionary mobile application that transforms the way university doctors, students, and parents engage within the educational ecosystem. Our app offers seamless communication, efficient resource management, and an enhanced learning experience for all users. Empowering doctors to upload materials, set tasks and exams, and communicate directly with students and parents. Students can access course materials, complete tasks, take exams, and receive direct messages, while parents can stay updated on their child's progress. Join us in creating a dynamic educational community, where learning is efficient, interactive, and enjoyable for all. Let's embark on this educational journey together!
 
 ## Features
 
