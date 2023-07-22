@@ -4,9 +4,9 @@
 
 Welcome to E_learning_APP, our app provides seamless communication, efficient resource management and an enhanced learning experience for all users. The application consists of three types of users for the first university doctor, enabling doctors to download materials, set assignments and tests, and take absences via qrcode, and communicate directly with students and parents. Second, students can access course materials, complete assignments, take tests, and receive direct messages. Third, parents can stay updated on their children's progress.
 
-| Onboarding screen | User type screen | Login screen | Sign up Screen|
-|:--------------------:|:--------------------:|:--------------------:|:--------------------:|
-|![877e1cb0-6d04-4e5d-8b9d-6390f7aa9c3f](https://github.com/Mohamed-Ismail-Salah/E_learning_APP/assets/109285951/4296954f-6ecd-44d7-970f-553ad07c3ec1)|![14f7af69-e070-4d4b-bcb7-2642399f02f5](https://github.com/Mohamed-Ismail-Salah/E_learning_APP/assets/109285951/d612bb23-bbfe-4f60-acdc-1ab48703868a)|![jpg](https://github.com/Mohamed-Ismail-Salah/E_learning_APP/assets/109285951/ad848838-bedf-4347-976c-ef5b04a56155)|![e39d2b10-36a3-40bb-aa74-f040a170d2e7](https://github.com/Mohamed-Ismail-Salah/E_learning_APP/assets/109285951/285ca2e9-368b-4c67-bab3-e3bd28ca180d)|
+| Onboarding screen | User type screen | Login screen | Sign up Screen |
+| --- | --- | --- | --- |
+| ![](https://github.com/Mohamed-Ismail-Salah/E_learning_APP/assets/109285951/4296954f-6ecd-44d7-970f-553ad07c3ec1) | ![](https://github.com/Mohamed-Ismail-Salah/E_learning_APP/assets/109285951/d612bb23-bbfe-4f60-acdc-1ab48703868a) | ![](https://github.com/Mohamed-Ismail-Salah/E_learning_APP/assets/109285951/ad848838-bedf-4347-976c-ef5b04a56155) | ![](https://github.com/Mohamed-Ismail-Salah/E_learning_APP/assets/109285951/285ca2e9-368b-4c67-bab3-e3bd28ca180d) |
 
 ## Features
 
